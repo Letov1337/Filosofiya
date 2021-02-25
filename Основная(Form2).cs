@@ -38,13 +38,11 @@ namespace Filosofiya
             string цитата = mas[num];
             Console.WriteLine(цитата);
             label1.Text = цитата;
-            
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Рандом(mas, line);
-            //StreamReader sr = new StreamReader(@"..\..\Sample.txt");
-            //line = sr.ReadLine();
+           
             
             
 
