@@ -19,7 +19,12 @@ namespace Filosofiya
 
         private void button1_Click(object sender, EventArgs e)
         {
+            webBrowser1.Show();
+        }
 
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            webBrowser1.Hide();
         }
     }
 }
