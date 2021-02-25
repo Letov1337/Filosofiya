@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{747D816B-7BC1-4931-A30A-693FA3F48BB5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Filosofiya</RootNamespace>
     <AssemblyName>Filosofiya</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -60,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Основная%28Form2%29.resx">
+      <DependentUpon>Основная%28Form2%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Предпочтения%28Form1%29.resx">
       <DependentUpon>Предпочтения%28Form1%29.cs</DependentUpon>
     </EmbeddedResource>
