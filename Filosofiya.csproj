@@ -46,22 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="основное1.cs">
+    <Compile Include="Основная%28Form2%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="основное1.Designer.cs">
-      <DependentUpon>основное1.cs</DependentUpon>
+    <Compile Include="Основная%28Form2%29.Designer.cs">
+      <DependentUpon>Основная%28Form2%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Предпочтения.cs">
+    <Compile Include="Предпочтения%28Form1%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Предпочтения.Designer.cs">
-      <DependentUpon>Предпочтения.cs</DependentUpon>
+    <Compile Include="Предпочтения%28Form1%29.Designer.cs">
+      <DependentUpon>Предпочтения%28Form1%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Предпочтения.resx">
-      <DependentUpon>Предпочтения.cs</DependentUpon>
+    <EmbeddedResource Include="Предпочтения%28Form1%29.resx">
+      <DependentUpon>Предпочтения%28Form1%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
