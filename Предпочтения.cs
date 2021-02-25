@@ -10,21 +10,28 @@ using System.Windows.Forms;
 
 namespace Filosofiya
 {
-    public partial class Form1 : Form
+    public partial class Предпочтения : Form
     {
-        public Form1()
+        public Предпочтения()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            webBrowser1.Show();
+            
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            webBrowser1.Hide();
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            основное1 f2 = new основное1();
+            this.Hide();
+            f2.Show();
         }
     }
 }
