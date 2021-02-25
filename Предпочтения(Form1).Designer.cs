@@ -42,7 +42,7 @@ namespace Filosofiya
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(57, 79);
+            this.checkBox1.Location = new System.Drawing.Point(21, 62);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 0;
@@ -52,7 +52,7 @@ namespace Filosofiya
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(57, 102);
+            this.checkBox2.Location = new System.Drawing.Point(21, 85);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 1;
@@ -62,7 +62,7 @@ namespace Filosofiya
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(57, 125);
+            this.checkBox3.Location = new System.Drawing.Point(21, 108);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(80, 17);
             this.checkBox3.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace Filosofiya
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(359, 79);
+            this.checkBox4.Location = new System.Drawing.Point(323, 62);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(80, 17);
             this.checkBox4.TabIndex = 3;
@@ -82,7 +82,7 @@ namespace Filosofiya
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(359, 102);
+            this.checkBox5.Location = new System.Drawing.Point(323, 85);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(80, 17);
             this.checkBox5.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace Filosofiya
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(359, 125);
+            this.checkBox6.Location = new System.Drawing.Point(323, 108);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(80, 17);
             this.checkBox6.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace Filosofiya
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(197, 198);
+            this.button1.Location = new System.Drawing.Point(161, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -113,7 +113,7 @@ namespace Filosofiya
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(138, 23);
+            this.label1.Location = new System.Drawing.Point(102, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(235, 24);
             this.label1.TabIndex = 7;
@@ -124,7 +124,7 @@ namespace Filosofiya
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(490, 275);
+            this.ClientSize = new System.Drawing.Size(425, 215);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox6);
