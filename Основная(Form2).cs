@@ -9,15 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
-
+using Tulpep.NotificationWindow;
 namespace Filosofiya
 {
     
     public partial class основное1 : Form
     {
-        string line;
-        string[] mas;
-       
+        private PopupNotifier popup = null;
+        string line; // line = mas
+        string[] mas; // массив-вывод
+        string цитата;
+
+
         public основное1()
         {
             InitializeComponent();
@@ -27,7 +30,7 @@ namespace Filosofiya
         {
             
         }
-        public void Рандом(string[] mas, string line)
+        public void Рандом(ref string[] mas, string line)
         {
             // считываем Sample.txt
             StreamReader sr = new StreamReader(@"..\..\Sample.txt");
@@ -36,23 +39,26 @@ namespace Filosofiya
             mas = line.Split('\n');
             Random rand = new Random();
             int num = rand.Next(0, mas.Length);
-            string цитата = mas[num];
+            цитата = mas[num];
             Console.WriteLine(цитата);
             label1.Text = цитата;
+            
+        }
+        public void Уведомления(string цитата)
+        {
+            popup = new PopupNotifier();
+            popup.Image = Properties.Resources.Image1;
+            popup.ImageSize = new Size(96, 96);
+            popup.TitleText = "test";
+            popup.ContentText = цитата;
+            popup.Popup();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Рандом(mas, line);
-           
-            
-            
-
+            Рандом(ref mas,line);
+            Уведомления(цитата);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            const string url = "https://baneks.site/%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D0%B9-%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84-%D1%84%D1%80%D0%B8%D0%B4%D1%80%D0%B8%D1%85-%D0%BD%D0%B8%D1%86%D1%88%D0%B5-%D0%B1%D1%8B%D0%BB-%D0%B4%D0%BE%D0%B1%D1%80%D1%8B%D0%B9-%D0%B8-%D0%B2%D0%B5%D1%81%D0%B5%D0%BB%D1%8B%D0%B9/?p=2";
-            Process.Start(url);
-        }
+       
     }
 }
