@@ -33,5 +33,10 @@ namespace Filosofiya
             this.Hide();
             f2.Show();
         }
+
+        private void Предпочтения_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,7 +19,8 @@ namespace Filosofiya
         string line; // line = mas
         string[] mas; // массив-вывод
         string цитата; // основной вывод 
-
+        public static string автор;
+        
 
         public основное1()
         {
@@ -44,6 +45,21 @@ namespace Filosofiya
             label1.Text = цитата;
             
         }
+        public void Автор()
+        {
+            // ебанный костыль 
+            string test = this.цитата;
+            string te = test.Substring(test.LastIndexOf("(") + 1);
+            автор = te.Substring(0, te.LastIndexOf(")"));
+            linkLabel1.Text = автор;
+        }
+        public void Узнать_об_авторе()
+        {
+            Браузер_Form3_ f3 = new Браузер_Form3_();
+            f3.Show();
+            //Uri url = new Uri("https://yandex.ru/images/search?text=" + автор_link);
+            //webControl1.Source = url;
+        }
         public void Уведомления(string цитата)
         {
             popup = new PopupNotifier();
@@ -62,8 +78,23 @@ namespace Filosofiya
         {
             Рандом(ref mas,line);
             Уведомления(цитата);
+            
         }
 
-       
+        private void label1_TextChanged(object sender, EventArgs e)
+        {
+            Автор();
+        }
+
+        private void основное1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Узнать_об_авторе();
+
+        }
     }
 }

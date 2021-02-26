@@ -36,6 +36,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Awesomium.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214, processorArchitecture=x86">
+      <HintPath>packages\Awesomium.Windows.Forms.Unofficial.1.7.5.0\lib\Awesomium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Awesomium.Windows.Forms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=9bd24830fbe304a0, processorArchitecture=x86">
+      <HintPath>packages\Awesomium.Windows.Forms.Unofficial.1.7.5.0\lib\Awesomium.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +58,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Браузер%28Form3%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Браузер%28Form3%29.Designer.cs">
+      <DependentUpon>Браузер%28Form3%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Основная%28Form2%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Браузер%28Form3%29.resx">
+      <DependentUpon>Браузер%28Form3%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Основная%28Form2%29.resx">
       <DependentUpon>Основная%28Form2%29.cs</DependentUpon>
     </EmbeddedResource>

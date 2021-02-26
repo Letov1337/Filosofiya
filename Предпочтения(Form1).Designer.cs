@@ -135,6 +135,7 @@ namespace Filosofiya
             this.Controls.Add(this.checkBox1);
             this.Name = "Предпочтения";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Предпочтения_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
