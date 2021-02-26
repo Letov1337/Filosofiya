@@ -18,7 +18,7 @@ namespace Filosofiya
         private PopupNotifier popup = null;
         string line; // line = mas
         string[] mas; // массив-вывод
-        string цитата;
+        string цитата; // основной вывод 
 
 
         public основное1()
@@ -48,9 +48,14 @@ namespace Filosofiya
         {
             popup = new PopupNotifier();
             popup.Image = Properties.Resources.Image1;
-            popup.ImageSize = new Size(96, 96);
+            popup.ImageSize = new Size(96, 96); // размер изображения
             popup.TitleText = "test";
+            popup.HeaderColor = Color.Blue; // цвет верхушки
+            popup.BodyColor = Color.Blue;  // основной цвет
+            popup.AnimationInterval = 20; // скорость анимации
             popup.ContentText = цитата;
+            popup.ContentFont = new Font("Times New Roman", 18); // цвет заголовка
+            popup.TitleFont = new Font("Times New Roman", 18); // цвет основн. текста
             popup.Popup();
         }
         private void button1_Click(object sender, EventArgs e)
