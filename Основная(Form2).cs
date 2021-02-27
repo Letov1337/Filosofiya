@@ -59,7 +59,7 @@ namespace Filosofiya
             // ебанный костыль 
             string test = this.цитата;
             string te = test.Substring(test.LastIndexOf("(") + 1);
-            автор = te.Substring(0, te.LastIndexOf(")"));
+            автор = te.Substring(0,te.LastIndexOf(")"));
             linkLabel1.Text = автор;
         }
         public void Узнать_об_авторе()
@@ -239,6 +239,12 @@ namespace Filosofiya
                 timer2.Stop();
                 button1.Show();
             }    
+        }
+
+        private void записатьЦитатуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Настройки form4 = new Настройки();
+            form4.Show();
         }
     }
 }
