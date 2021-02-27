@@ -11,11 +11,13 @@ using System.IO;
 using System.Net;
 using System.Diagnostics;
 using Tulpep.NotificationWindow;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace Filosofiya
 {
     
-    public partial class основное1 : Form
+    public partial class основное1 : MaterialForm
     {
         private PopupNotifier popup = null;
         string line; // line = mas
@@ -150,7 +152,30 @@ namespace Filosofiya
         {
             NI.Visible = false;
         }
-        
+
+        private void toolStripComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var materialskin = MaterialSkinManager.Instance;
+            materialskin.AddFormToManage(this);
+            if (toolStripComboBox2.SelectedIndex == 0)
+            {
+                materialskin.Theme = MaterialSkinManager.Themes.DARK;
+                this.Controls["label1"].BackColor = Color.FromName("Gray");
+                this.Controls["label1"].BackColor = Color.FromName("Gray");
+
+            }
+            else if (toolStripComboBox2.SelectedIndex == 1)
+            {
+                
+                materialskin.Theme = MaterialSkinManager.Themes.LIGHT;
+            }
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
+        }
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Filosofiya
 {
-    public partial class Предпочтения : Form
+    public partial class Предпочтения : MaterialForm
     {
         public Предпочтения()
         {
