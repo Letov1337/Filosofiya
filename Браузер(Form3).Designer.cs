@@ -48,6 +48,7 @@ namespace Filosofiya
             this.ClientSize = new System.Drawing.Size(1046, 562);
             this.Controls.Add(this.webControl1);
             this.Name = "Браузер_Form3_";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Браузер_Form3_";
             this.ResumeLayout(false);
 
