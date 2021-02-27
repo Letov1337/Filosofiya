@@ -161,13 +161,15 @@ namespace Filosofiya
             {
                 materialskin.Theme = MaterialSkinManager.Themes.DARK;
                 this.Controls["label1"].BackColor = Color.FromName("Gray");
-                this.Controls["label1"].BackColor = Color.FromName("Gray");
+                this.Controls["linkLabel1"].BackColor = Color.FromName("Gray");
 
             }
             else if (toolStripComboBox2.SelectedIndex == 1)
             {
                 
                 materialskin.Theme = MaterialSkinManager.Themes.LIGHT;
+                this.Controls["label1"].BackColor = Color.FromName("White");
+                this.Controls["linkLabel1"].BackColor = Color.FromName("White");
             }
         }
 
