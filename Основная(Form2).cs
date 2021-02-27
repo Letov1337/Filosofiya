@@ -125,5 +125,24 @@ namespace Filosofiya
             Узнать_об_авторе();
 
         }
+        private NotifyIcon NI = new NotifyIcon();
+        public void Notifier()
+        {
+            Рандом(ref mas, line);
+            NI.BalloonTipText = "Ницше нассал в ботинок";
+            NI.BalloonTipTitle = цитата;
+            NI.BalloonTipIcon = ToolTipIcon.Info;
+            NI.Icon = this.Icon;
+            NI.Visible = true;
+            NI.ShowBalloonTip(1000);
+        }
+        private void NI_BallonTipClosed(Object sender, EventArgs e)
+        {
+            NI.Visible = false;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Notifier();
+        }
     }
 }
