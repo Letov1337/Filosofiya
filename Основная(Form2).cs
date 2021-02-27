@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Net;
 using System.Diagnostics;
 using Tulpep.NotificationWindow;
+
 namespace Filosofiya
 {
     
@@ -34,7 +36,7 @@ namespace Filosofiya
         public void Рандом(ref string[] mas, string line)
         {
             // считываем Sample.txt
-            StreamReader sr = new StreamReader(@"..\..\Sample.txt");
+            StreamReader sr = new StreamReader(@".\Resources\цитаты.txt");
             line = sr.ReadToEnd();
             // невьебенный рандом
             mas = line.Split('\n');
@@ -57,8 +59,35 @@ namespace Filosofiya
         {
             Браузер_Form3_ f3 = new Браузер_Form3_();
             f3.Show();
-            //Uri url = new Uri("https://yandex.ru/images/search?text=" + автор_link);
-            //webControl1.Source = url;
+        }
+        public void Получение_изображение_об_авторе()
+        {
+            string Ницще = @".\Resources\ницше.jpg";
+            string Декарт = @".\Resources\декарт.jpg";
+            string Лейбниц = @".\Resources\лейбниц.jpg";
+
+                    if (автор == "Ницше")
+                    {
+                        pictureBox1.Image = null;
+                        pictureBox1.Image = Image.FromFile(Ницще);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+    
+                    }
+                    else if (автор == "Декарт")
+                    {
+                        pictureBox1.Image = null;
+                        pictureBox1.Image = Image.FromFile(Декарт);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                     }
+                    else if (автор == "Лейбниц")
+                    {
+                        pictureBox1.Image = null;
+                        pictureBox1.Image = Image.FromFile(Лейбниц);
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                     }
+
         }
         public void Уведомления(string цитата)
         {
@@ -78,7 +107,7 @@ namespace Filosofiya
         {
             Рандом(ref mas,line);
             Уведомления(цитата);
-            
+            Получение_изображение_об_авторе();
         }
 
         private void label1_TextChanged(object sender, EventArgs e)
