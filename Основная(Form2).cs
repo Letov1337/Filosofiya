@@ -144,7 +144,7 @@ namespace Filosofiya
             NI.BalloonTipText = "Ницше нассал в ботинок";
             NI.BalloonTipTitle = цитата;
             NI.BalloonTipIcon = ToolTipIcon.None;
-            NI.Icon = new Icon("povezlo.ico");
+            NI.Icon = new Icon(@".\Resources\povezlo.ico");
             NI.Visible = true;
             NI.ShowBalloonTip(1000);
         }

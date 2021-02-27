@@ -118,6 +118,9 @@
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\povezlo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\декарт.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
