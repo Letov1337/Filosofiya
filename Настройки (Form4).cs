@@ -14,7 +14,7 @@ namespace Filosofiya
 {
     public partial class Настройки : MaterialForm
     {
-        
+      
         public void Считываем()
         {
             using (StreamReader myReader = new StreamReader(@".\Resources\цитаты.txt" , Encoding.UTF8))
@@ -38,7 +38,11 @@ namespace Filosofiya
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            основное1 main = this.Owner as основное1;
+            if(main.a == 0)
+            {
+                tabControl1.SelectedIndex = 1;
+            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -54,6 +58,11 @@ namespace Filosofiya
         private void button2_Click(object sender, EventArgs e)
         {
             Считываем();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

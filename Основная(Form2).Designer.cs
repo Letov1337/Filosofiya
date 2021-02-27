@@ -36,19 +36,19 @@ namespace Filosofiya
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.уведомленияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.типToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
             this.таймерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
+            this.записатьЦитатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.темаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.записатьЦитатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.уведомленияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -119,24 +119,6 @@ namespace Filosofiya
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.настройкиToolStripMenuItem.Text = "Настройки";
             // 
-            // уведомленияToolStripMenuItem
-            // 
-            this.уведомленияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox1});
-            this.уведомленияToolStripMenuItem.Name = "уведомленияToolStripMenuItem";
-            this.уведомленияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.уведомленияToolStripMenuItem.Text = "Тип уведомлений";
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.Items.AddRange(new object[] {
-            "Уведомления_1",
-            "Уведомления_2",
-            "Отключить"});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
-            this.toolStripComboBox1.Text = "Выбрать уведом.";
-            // 
             // типToolStripMenuItem
             // 
             this.типToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -161,6 +143,7 @@ namespace Filosofiya
             this.таймерToolStripMenuItem.Name = "таймерToolStripMenuItem";
             this.таймерToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.таймерToolStripMenuItem.Text = "Таймер";
+            this.таймерToolStripMenuItem.Click += new System.EventHandler(this.таймерToolStripMenuItem_Click);
             // 
             // toolStripComboBox4
             // 
@@ -170,6 +153,13 @@ namespace Filosofiya
             this.toolStripComboBox4.Name = "toolStripComboBox4";
             this.toolStripComboBox4.Size = new System.Drawing.Size(121, 23);
             this.toolStripComboBox4.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox4_SelectedIndexChanged);
+            // 
+            // записатьЦитатуToolStripMenuItem
+            // 
+            this.записатьЦитатуToolStripMenuItem.Name = "записатьЦитатуToolStripMenuItem";
+            this.записатьЦитатуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.записатьЦитатуToolStripMenuItem.Text = "Записать цитату";
+            this.записатьЦитатуToolStripMenuItem.Click += new System.EventHandler(this.записатьЦитатуToolStripMenuItem_Click);
             // 
             // темаToolStripMenuItem
             // 
@@ -213,12 +203,23 @@ namespace Filosofiya
             this.timer2.Interval = 60000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // записатьЦитатуToolStripMenuItem
+            // toolStripComboBox1
             // 
-            this.записатьЦитатуToolStripMenuItem.Name = "записатьЦитатуToolStripMenuItem";
-            this.записатьЦитатуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.записатьЦитатуToolStripMenuItem.Text = "Записать цитату";
-            this.записатьЦитатуToolStripMenuItem.Click += new System.EventHandler(this.записатьЦитатуToolStripMenuItem_Click);
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "Уведомления_1",
+            "Уведомления_2",
+            "Отключить"});
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox1.Text = "Выбрать уведом.";
+            // 
+            // уведомленияToolStripMenuItem
+            // 
+            this.уведомленияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox1});
+            this.уведомленияToolStripMenuItem.Name = "уведомленияToolStripMenuItem";
+            this.уведомленияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.уведомленияToolStripMenuItem.Text = "Тип уведомлений";
             // 
             // основное1
             // 
@@ -252,8 +253,6 @@ namespace Filosofiya
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem уведомленияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.ToolStripMenuItem темаToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
@@ -265,5 +264,7 @@ namespace Filosofiya
         private System.Windows.Forms.ToolStripMenuItem таймерToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox4;
         private System.Windows.Forms.ToolStripMenuItem записатьЦитатуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem уведомленияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
     }
 }

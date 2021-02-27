@@ -25,8 +25,8 @@ namespace Filosofiya
         string[] mas; // массив-вывод
         string цитата; // основной вывод 
         public static string автор;
+        public int a;
         private NotifyIcon NI = new NotifyIcon(); // уведомления 2 
-        private static System.Timers.Timer aTimer;
         public основное1()
         {
             InitializeComponent();
@@ -241,10 +241,24 @@ namespace Filosofiya
             }    
         }
 
-        private void записатьЦитатуToolStripMenuItem_Click(object sender, EventArgs e)
+        public void записатьЦитатуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Настройки form4 = new Настройки();
-            form4.Show();
+            form4.Owner = this;
+            form4.ShowDialog();
+            a = 1;
+        }
+
+        private void таймерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            //Настройки form4 = new Настройки();
+            //form4.ShowDialog();
+        }
+
+        private void ТаймерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
