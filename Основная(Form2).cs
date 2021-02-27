@@ -22,7 +22,7 @@ namespace Filosofiya
         string[] mas; // массив-вывод
         string цитата; // основной вывод 
         public static string автор;
-        
+        private NotifyIcon NI = new NotifyIcon(); // уведомления 2 
 
         public основное1()
         {
@@ -106,7 +106,18 @@ namespace Filosofiya
         private void button1_Click(object sender, EventArgs e)
         {
             Рандом(ref mas,line);
-            Уведомления(цитата);
+            if (toolStripComboBox1.SelectedIndex == 0)
+            {
+                Уведомления(цитата);
+            }
+            else if (toolStripComboBox1.SelectedIndex == 1)
+            {
+                Notifier();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 2)
+            {
+
+            }
             Получение_изображение_об_авторе();
         }
 
@@ -125,7 +136,6 @@ namespace Filosofiya
             Узнать_об_авторе();
 
         }
-        private NotifyIcon NI = new NotifyIcon();
         public void Notifier()
         {
             Рандом(ref mas, line);
@@ -140,9 +150,8 @@ namespace Filosofiya
         {
             NI.Visible = false;
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Notifier();
-        }
+        
     }
 }
+
+
