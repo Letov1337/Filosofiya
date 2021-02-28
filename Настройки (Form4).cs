@@ -14,7 +14,9 @@ namespace Filosofiya
 {
     public partial class Настройки : MaterialForm
     {
-      
+        
+
+
         public void Считываем()
         {
             using (StreamReader myReader = new StreamReader(@".\Resources\цитаты.txt" , Encoding.UTF8))
@@ -30,16 +32,22 @@ namespace Filosofiya
                 myWriter.Write(line);
             }
         }
-        public Настройки()
+        int data;
+        public Настройки(int data)
         {
             InitializeComponent();
             Считываем();
+            this.data = data;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            основное1 main = this.Owner as основное1;
-            if(main.a == 0)
+            
+            if(data == 4)
+            {
+                tabControl1.SelectedIndex = 0;
+            }
+            if (data == 2)
             {
                 tabControl1.SelectedIndex = 1;
             }
