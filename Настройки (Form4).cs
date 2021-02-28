@@ -16,7 +16,7 @@ namespace Filosofiya
     {
         
 
-
+        
         public void Считываем()
         {
             using (StreamReader myReader = new StreamReader(@".\Resources\цитаты.txt" , Encoding.UTF8))
@@ -71,6 +71,40 @@ namespace Filosofiya
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            float time_set = Convert.ToInt32(textBox1.Text);
+            // проверка на ошибки
+            if (comboBox1.SelectedIndex == -1)
+            {
+                label1.Text = "Что-то пошло не так";
+            }
+            //в часах
+            if (comboBox1.SelectedIndex == 0)
+            {
+                Data.Value = time_set * 3600000;
+            }
+            //в минутах
+            if (comboBox1.SelectedIndex == 1)
+            {
+                Data.Value = time_set * 60000;
+            }
+            //секунды
+            if (comboBox1.SelectedIndex == 2)
+            {
+                Data.Value = time_set * 1000;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

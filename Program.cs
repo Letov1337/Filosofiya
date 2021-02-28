@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace Filosofiya
 {
+    static class Data
+    {
+        public static float Value { get; set; }
+    }
     static class Program
     {
         /// <summary>
@@ -18,5 +22,6 @@ namespace Filosofiya
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new основное1());
         }
+       
     }
 }

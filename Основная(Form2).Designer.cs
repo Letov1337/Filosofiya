@@ -36,6 +36,8 @@ namespace Filosofiya
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.уведомленияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.типToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
             this.таймерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,8 +49,10 @@ namespace Filosofiya
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.уведомленияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиШрифтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.настройкиШрифтаЧасовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиШрифтаЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,9 +102,11 @@ namespace Filosofiya
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Azure;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.настройкиToolStripMenuItem,
             this.темаToolStripMenuItem,
+            this.настройкиШрифтаToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -118,6 +124,24 @@ namespace Filosofiya
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.настройкиToolStripMenuItem.Text = "Настройки";
+            // 
+            // уведомленияToolStripMenuItem
+            // 
+            this.уведомленияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox1});
+            this.уведомленияToolStripMenuItem.Name = "уведомленияToolStripMenuItem";
+            this.уведомленияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.уведомленияToolStripMenuItem.Text = "Тип уведомлений";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "Уведомления_1",
+            "Уведомления_2",
+            "Отключить"});
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox1.Text = "Выбрать уведом.";
             // 
             // типToolStripMenuItem
             // 
@@ -203,23 +227,28 @@ namespace Filosofiya
             this.timer2.Interval = 60000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // toolStripComboBox1
+            // настройкиШрифтаToolStripMenuItem
             // 
-            this.toolStripComboBox1.Items.AddRange(new object[] {
-            "Уведомления_1",
-            "Уведомления_2",
-            "Отключить"});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
-            this.toolStripComboBox1.Text = "Выбрать уведом.";
+            this.настройкиШрифтаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настройкиШрифтаЧасовToolStripMenuItem,
+            this.настройкиШрифтаЦитатыToolStripMenuItem});
+            this.настройкиШрифтаToolStripMenuItem.Name = "настройкиШрифтаToolStripMenuItem";
+            this.настройкиШрифтаToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
+            this.настройкиШрифтаToolStripMenuItem.Text = "Настройки шрифта";
             // 
-            // уведомленияToolStripMenuItem
+            // настройкиШрифтаЧасовToolStripMenuItem
             // 
-            this.уведомленияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox1});
-            this.уведомленияToolStripMenuItem.Name = "уведомленияToolStripMenuItem";
-            this.уведомленияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.уведомленияToolStripMenuItem.Text = "Тип уведомлений";
+            this.настройкиШрифтаЧасовToolStripMenuItem.Name = "настройкиШрифтаЧасовToolStripMenuItem";
+            this.настройкиШрифтаЧасовToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.настройкиШрифтаЧасовToolStripMenuItem.Text = "Настройки шрифта часов";
+            this.настройкиШрифтаЧасовToolStripMenuItem.Click += new System.EventHandler(this.настройкиШрифтаЧасовToolStripMenuItem_Click);
+            // 
+            // настройкиШрифтаЦитатыToolStripMenuItem
+            // 
+            this.настройкиШрифтаЦитатыToolStripMenuItem.Name = "настройкиШрифтаЦитатыToolStripMenuItem";
+            this.настройкиШрифтаЦитатыToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.настройкиШрифтаЦитатыToolStripMenuItem.Text = "Настройки шрифта цитаты";
+            this.настройкиШрифтаЦитатыToolStripMenuItem.Click += new System.EventHandler(this.настройкиШрифтаЦитатыToolStripMenuItem_Click);
             // 
             // основное1
             // 
@@ -266,5 +295,9 @@ namespace Filosofiya
         private System.Windows.Forms.ToolStripMenuItem записатьЦитатуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem уведомленияToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripMenuItem настройкиШрифтаToolStripMenuItem;
+        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.ToolStripMenuItem настройкиШрифтаЧасовToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem настройкиШрифтаЦитатыToolStripMenuItem;
     }
 }

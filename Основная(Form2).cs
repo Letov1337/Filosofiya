@@ -39,6 +39,11 @@ namespace Filosofiya
         {
             
         }
+
+        public void Шрифт()
+        {
+            //label1.Font.Size = 200;
+        }
         public void Рандом(string[] mas, string line)
         {
             // считываем Sample.txt
@@ -231,6 +236,7 @@ namespace Filosofiya
             if (toolStripComboBox4.SelectedIndex == 0 )
             {
                 timer2.Start();
+                timer2.Interval = Convert.ToInt32(Data.Value);
                 button1.Hide();
             }
            else if (toolStripComboBox4.SelectedIndex == 1)
@@ -251,12 +257,24 @@ namespace Filosofiya
         private void таймерToolStripMenuItem_Click(object sender, EventArgs e)
         {
            Настройки form4 = new Настройки(this.b);
-            form4.ShowDialog();
+            form4.Show();
         }
 
         private void ТаймерToolStripMenuItem_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void настройкиШрифтаЧасовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            label2.Font = fontDialog1.Font;
+        }
+
+        private void настройкиШрифтаЦитатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            label1.Font = fontDialog1.Font;
         }
     }
 }
