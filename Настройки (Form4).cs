@@ -25,7 +25,7 @@ namespace Filosofiya
             }
             if (comboBox2.SelectedIndex == 0) //Материализм
             {
-
+                label2.Hide();
                 using (StreamReader myReader = new StreamReader(@".\Resources\Материализм.txt", Encoding.UTF8))
                 {
                     richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
@@ -33,6 +33,7 @@ namespace Filosofiya
             }
             if (comboBox2.SelectedIndex == 1) //Идеализм
             {
+                label2.Hide();
                 using (StreamReader myReader = new StreamReader(@".\Resources\Идеализм.txt", Encoding.UTF8))
                 {
                     richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
@@ -114,16 +115,19 @@ namespace Filosofiya
             if (comboBox1.SelectedIndex == 0)
             {
                 Data.Value = time_set * 3600000;
+                label1.Text = "Настройки применены";
             }
             //в минутах
             if (comboBox1.SelectedIndex == 1)
             {
                 Data.Value = time_set * 60000;
+                label1.Text = "Настройки применены";
             }
             //секунды
             if (comboBox1.SelectedIndex == 2)
             {
                 Data.Value = time_set * 1000;
+                label1.Text = "Настройки применены";
             }
         }
 
@@ -139,21 +143,7 @@ namespace Filosofiya
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedIndex == 0) //Материализм
-            {
-
-                using (StreamReader myReader = new StreamReader(@".\Resources\Материализм.txt", Encoding.UTF8))
-                {
-                    richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
-                }
-            }
-            if (comboBox2.SelectedIndex == 1) //Идеализм
-            {
-                using (StreamReader myReader = new StreamReader(@".\Resources\Идеализм.txt", Encoding.UTF8))
-                {
-                    richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
-                }
-            }
+            Считываем();
         }
     }
 }

@@ -45,14 +45,14 @@ namespace Filosofiya
             this.записатьЦитатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.темаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
+            this.настройкиШрифтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиШрифтаЧасовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиШрифтаЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.настройкиШрифтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.настройкиШрифтаЧасовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиШрифтаЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -149,15 +149,17 @@ namespace Filosofiya
             this.toolStripComboBox3});
             this.типToolStripMenuItem.Name = "типToolStripMenuItem";
             this.типToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.типToolStripMenuItem.Text = "Тип";
+            this.типToolStripMenuItem.Text = "Часы";
             // 
             // toolStripComboBox3
             // 
+            this.toolStripComboBox3.IntegralHeight = false;
             this.toolStripComboBox3.Items.AddRange(new object[] {
             "Часы(ON)",
             "Часы(OFF)"});
             this.toolStripComboBox3.Name = "toolStripComboBox3";
             this.toolStripComboBox3.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox3.Text = "Вкл,выкл.";
             this.toolStripComboBox3.TextChanged += new System.EventHandler(this.toolStripComboBox3_TextChanged);
             // 
             // таймерToolStripMenuItem
@@ -176,6 +178,7 @@ namespace Filosofiya
             "Off"});
             this.toolStripComboBox4.Name = "toolStripComboBox4";
             this.toolStripComboBox4.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox4.Text = "Вкл,выкл.";
             this.toolStripComboBox4.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox4_SelectedIndexChanged);
             // 
             // записатьЦитатуToolStripMenuItem
@@ -202,6 +205,29 @@ namespace Filosofiya
             this.toolStripComboBox2.Size = new System.Drawing.Size(121, 23);
             this.toolStripComboBox2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox2_SelectedIndexChanged);
             // 
+            // настройкиШрифтаToolStripMenuItem
+            // 
+            this.настройкиШрифтаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настройкиШрифтаЧасовToolStripMenuItem,
+            this.настройкиШрифтаЦитатыToolStripMenuItem});
+            this.настройкиШрифтаToolStripMenuItem.Name = "настройкиШрифтаToolStripMenuItem";
+            this.настройкиШрифтаToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
+            this.настройкиШрифтаToolStripMenuItem.Text = "Настройки шрифта";
+            // 
+            // настройкиШрифтаЧасовToolStripMenuItem
+            // 
+            this.настройкиШрифтаЧасовToolStripMenuItem.Name = "настройкиШрифтаЧасовToolStripMenuItem";
+            this.настройкиШрифтаЧасовToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.настройкиШрифтаЧасовToolStripMenuItem.Text = "Настройки шрифта часов";
+            this.настройкиШрифтаЧасовToolStripMenuItem.Click += new System.EventHandler(this.настройкиШрифтаЧасовToolStripMenuItem_Click);
+            // 
+            // настройкиШрифтаЦитатыToolStripMenuItem
+            // 
+            this.настройкиШрифтаЦитатыToolStripMenuItem.Name = "настройкиШрифтаЦитатыToolStripMenuItem";
+            this.настройкиШрифтаЦитатыToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.настройкиШрифтаЦитатыToolStripMenuItem.Text = "Настройки шрифта цитаты";
+            this.настройкиШрифтаЦитатыToolStripMenuItem.Click += new System.EventHandler(this.настройкиШрифтаЦитатыToolStripMenuItem_Click);
+            // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
@@ -216,9 +242,11 @@ namespace Filosofiya
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(354, 102);
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(343, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(56, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "label2";
             // 
@@ -226,29 +254,6 @@ namespace Filosofiya
             // 
             this.timer2.Interval = 60000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // настройкиШрифтаToolStripMenuItem
-            // 
-            this.настройкиШрифтаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиШрифтаЧасовToolStripMenuItem,
-            this.настройкиШрифтаЦитатыToolStripMenuItem});
-            this.настройкиШрифтаToolStripMenuItem.Name = "настройкиШрифтаToolStripMenuItem";
-            this.настройкиШрифтаToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
-            this.настройкиШрифтаToolStripMenuItem.Text = "Настройки шрифта";
-            // 
-            // настройкиШрифтаЧасовToolStripMenuItem
-            // 
-            this.настройкиШрифтаЧасовToolStripMenuItem.Name = "настройкиШрифтаЧасовToolStripMenuItem";
-            this.настройкиШрифтаЧасовToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
-            this.настройкиШрифтаЧасовToolStripMenuItem.Text = "Настройки шрифта часов";
-            this.настройкиШрифтаЧасовToolStripMenuItem.Click += new System.EventHandler(this.настройкиШрифтаЧасовToolStripMenuItem_Click);
-            // 
-            // настройкиШрифтаЦитатыToolStripMenuItem
-            // 
-            this.настройкиШрифтаЦитатыToolStripMenuItem.Name = "настройкиШрифтаЦитатыToolStripMenuItem";
-            this.настройкиШрифтаЦитатыToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.настройкиШрифтаЦитатыToolStripMenuItem.Text = "Настройки шрифта цитаты";
-            this.настройкиШрифтаЦитатыToolStripMenuItem.Click += new System.EventHandler(this.настройкиШрифтаЦитатыToolStripMenuItem_Click);
             // 
             // основное1
             // 
