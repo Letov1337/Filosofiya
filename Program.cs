@@ -9,6 +9,7 @@ namespace Filosofiya
     static class Data
     {
         public static float Value { get; set; }
+        public static int Предпочтения_значение { get; set; }
     }
     static class Program
     {
@@ -20,7 +21,7 @@ namespace Filosofiya
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new основное1());
+            Application.Run(new Предпочтения());
         }
        
     }

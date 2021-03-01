@@ -19,18 +19,48 @@ namespace Filosofiya
         
         public void Считываем()
         {
-            using (StreamReader myReader = new StreamReader(@".\Resources\цитаты.txt" , Encoding.UTF8))
+            if (comboBox2.SelectedIndex == -1)
             {
-                richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
+                label2.Text = "Воспользуйтесь выпадающим списком! (combobox)";
             }
+            if (comboBox2.SelectedIndex == 0) //Материализм
+            {
+
+                using (StreamReader myReader = new StreamReader(@".\Resources\Материализм.txt", Encoding.UTF8))
+                {
+                    richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
+                }
+            }
+            if (comboBox2.SelectedIndex == 1) //Идеализм
+            {
+                using (StreamReader myReader = new StreamReader(@".\Resources\Идеализм.txt", Encoding.UTF8))
+                {
+                    richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
+                }
+            }
+            
         }
         public void Запись()
         {
-            using (StreamWriter myWriter = new StreamWriter(@".\Resources\цитаты.txt"))
+            if (comboBox2.SelectedIndex == 0)
             {
-                string line = richTextBox1.Text;
-                myWriter.Write(line);
+                using (StreamWriter myWriter = new StreamWriter(@".\Resources\Материализм.txt"))
+                {
+                    string line = richTextBox1.Text;
+                    myWriter.Write(line);
+                    label2.Text = "Записал!";
+                }
             }
+            if (comboBox2.SelectedIndex == 1)
+            {
+                using (StreamWriter myWriter = new StreamWriter(@".\Resources\Идеализм.txt"))
+                {
+                    string line = richTextBox1.Text;
+                    myWriter.Write(line);
+                    label2.Text = "Записал!";
+                }
+            }
+            
         }
         int data;
         public Настройки(int data)
@@ -105,6 +135,25 @@ namespace Filosofiya
         private void button4_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedIndex == 0) //Материализм
+            {
+
+                using (StreamReader myReader = new StreamReader(@".\Resources\Материализм.txt", Encoding.UTF8))
+                {
+                    richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
+                }
+            }
+            if (comboBox2.SelectedIndex == 1) //Идеализм
+            {
+                using (StreamReader myReader = new StreamReader(@".\Resources\Идеализм.txt", Encoding.UTF8))
+                {
+                    richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
+                }
+            }
         }
     }
 }

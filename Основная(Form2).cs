@@ -47,16 +47,43 @@ namespace Filosofiya
         public void Рандом(string[] mas, string line)
         {
             // считываем Sample.txt
-            StreamReader sr = new StreamReader(@".\Resources\цитаты.txt");
-            line = sr.ReadToEnd();
-            // невьебенный рандом
-            mas = line.Split('\n');
-            Random rand = new Random();
-            int num = rand.Next(0, mas.Length);
-            цитата = mas[num];
-            Console.WriteLine(цитата);
-            label1.Text = цитата;
-            
+            if (Data.Предпочтения_значение == 1)
+            {
+                StreamReader sr = new StreamReader(@".\Resources\Материализм.txt");
+                line = sr.ReadToEnd();
+                // невьебенный рандом
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
+            if (Data.Предпочтения_значение == 2)
+            {
+                StreamReader sr = new StreamReader(@".\Resources\Идеализм.txt");
+                line = sr.ReadToEnd();
+                // невьебенный рандом
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
+            if (Data.Предпочтения_значение == 12 )
+            {
+                StreamReader sr = new StreamReader(@".\Resources\Идеализм.txt");
+                StreamReader sr1 = new StreamReader(@".\Resources\Материализм.txt");
+                line = sr.ReadToEnd() + "\n"+ sr1.ReadToEnd();
+                // невьебенный рандом
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
         }
         public void Автор()
         {
@@ -76,7 +103,7 @@ namespace Filosofiya
             string Ницще = @".\Resources\ницше.jpg";
             string Декарт = @".\Resources\декарт.jpg";
             string Лейбниц = @".\Resources\лейбниц.jpg";
-
+            string Test = @".\Resources\1.jpg";
                     if (автор == "Ницше")
                     {
                         pictureBox1.Image = null;
@@ -84,20 +111,26 @@ namespace Filosofiya
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
     
                     }
-                    else if (автор == "Декарт")
+                    if (автор == "Декарт")
                     {
                         pictureBox1.Image = null;
                         pictureBox1.Image = Image.FromFile(Декарт);
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
                      }
-                    else if (автор == "Лейбниц")
+                    if (автор == "Лейбниц")
                     {
                         pictureBox1.Image = null;
                         pictureBox1.Image = Image.FromFile(Лейбниц);
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
                      }
+                    if (автор == "тест")
+                     {
+                       pictureBox1.Image = null;
+                       pictureBox1.Image = Image.FromFile(Test);
+                       pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                      }
 
         }
 
