@@ -121,11 +121,6 @@ namespace Filosofiya
 
             }
             Получение_изображение_об_авторе();
-            DateTime Date1 = DateTime.Now;
-            if (Date1.Minute > 12)
-            {
-                Console.WriteLine("Works");
-            }
         }
 
         private void label1_TextChanged(object sender, EventArgs e)
