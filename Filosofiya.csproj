@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{747D816B-7BC1-4931-A30A-693FA3F48BB5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Filosofiya</RootNamespace>
     <AssemblyName>Filosofiya</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -61,6 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Настройки %28Form4%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Настройки %28Form4%29.Designer.cs">
+      <DependentUpon>Настройки %28Form4%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Браузер%28Form3%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Браузер%28Form3%29.resx">
       <DependentUpon>Браузер%28Form3%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Настройки %28Form4%29.resx">
+      <DependentUpon>Настройки %28Form4%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Основная%28Form2%29.resx">
       <DependentUpon>Основная%28Form2%29.cs</DependentUpon>
@@ -118,19 +127,25 @@
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\povezlo.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\декарт.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Идеализм.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\лейбниц.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\ницше.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Resources\Материализм.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Цитаты.txt">
+    <Content Include="Resources\ницше.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

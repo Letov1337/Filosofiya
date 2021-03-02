@@ -13,7 +13,8 @@ using System.Diagnostics;
 using Tulpep.NotificationWindow;
 using MaterialSkin.Controls;
 using MaterialSkin;
-
+using System.Threading;
+using System.Timers;
 namespace Filosofiya
 {
     
@@ -25,36 +26,71 @@ namespace Filosofiya
         string цитата; // основной вывод 
         public static string автор;
         private NotifyIcon NI = new NotifyIcon(); // уведомления 2 
-
         public основное1()
         {
             InitializeComponent();
+            label2.Text = "";
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            
         }
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
             
         }
-        public void Рандом(ref string[] mas, string line)
+
+        public void Шрифт()
+        {
+            //label1.Font.Size = 200;
+        }
+        public void Рандом(string[] mas, string line)
         {
             // считываем Sample.txt
-            StreamReader sr = new StreamReader(@".\Resources\цитаты.txt");
-            line = sr.ReadToEnd();
-            // невьебенный рандом
-            mas = line.Split('\n');
-            Random rand = new Random();
-            int num = rand.Next(0, mas.Length);
-            цитата = mas[num];
-            Console.WriteLine(цитата);
-            label1.Text = цитата;
-            
+            if (Data.Предпочтения_значение == 1)
+            {
+                StreamReader sr = new StreamReader(@".\Resources\Материализм.txt");
+                line = sr.ReadToEnd();
+                // невьебенный рандом
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
+            if (Data.Предпочтения_значение == 2)
+            {
+                StreamReader sr = new StreamReader(@".\Resources\Идеализм.txt");
+                line = sr.ReadToEnd();
+                // невьебенный рандом
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
+            if (Data.Предпочтения_значение == 12 )
+            {
+                StreamReader sr = new StreamReader(@".\Resources\Идеализм.txt");
+                StreamReader sr1 = new StreamReader(@".\Resources\Материализм.txt");
+                line = sr.ReadToEnd() + "\n"+ sr1.ReadToEnd();
+                // невьебенный рандом
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
         }
         public void Автор()
         {
             // ебанный костыль 
             string test = this.цитата;
             string te = test.Substring(test.LastIndexOf("(") + 1);
-            автор = te.Substring(0, te.LastIndexOf(")"));
+            автор = te.Substring(0,te.LastIndexOf(")"));
             linkLabel1.Text = автор;
         }
         public void Узнать_об_авторе()
@@ -67,7 +103,7 @@ namespace Filosofiya
             string Ницще = @".\Resources\ницше.jpg";
             string Декарт = @".\Resources\декарт.jpg";
             string Лейбниц = @".\Resources\лейбниц.jpg";
-
+            string Test = @".\Resources\1.jpg";
                     if (автор == "Ницше")
                     {
                         pictureBox1.Image = null;
@@ -75,22 +111,29 @@ namespace Filosofiya
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
     
                     }
-                    else if (автор == "Декарт")
+                    if (автор == "Декарт")
                     {
                         pictureBox1.Image = null;
                         pictureBox1.Image = Image.FromFile(Декарт);
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
                      }
-                    else if (автор == "Лейбниц")
+                    if (автор == "Лейбниц")
                     {
                         pictureBox1.Image = null;
                         pictureBox1.Image = Image.FromFile(Лейбниц);
                         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
                      }
+                    if (автор == "тест")
+                     {
+                       pictureBox1.Image = null;
+                       pictureBox1.Image = Image.FromFile(Test);
+                       pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                      }
 
         }
+
         public void Уведомления(string цитата)
         {
             popup = new PopupNotifier();
@@ -105,9 +148,9 @@ namespace Filosofiya
             popup.TitleFont = new Font("Times New Roman", 18); // цвет основн. текста
             popup.Popup();
         }
-        private void button1_Click(object sender, EventArgs e)
+        public void Все_в_месте()
         {
-            Рандом(ref mas,line);
+            Рандом(mas, line);
             if (toolStripComboBox1.SelectedIndex == 0)
             {
                 Уведомления(цитата);
@@ -122,15 +165,21 @@ namespace Filosofiya
             }
             Получение_изображение_об_авторе();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Все_в_месте();
+        }
 
         private void label1_TextChanged(object sender, EventArgs e)
         {
             Автор();
         }
+        
 
         private void основное1_Load(object sender, EventArgs e)
         {
             
+           
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -140,7 +189,7 @@ namespace Filosofiya
         }
         public void Notifier()
         {
-            Рандом(ref mas, line);
+            Рандом(mas, line);
             NI.BalloonTipText = "Ницше нассал в ботинок";
             NI.BalloonTipTitle = цитата;
             NI.BalloonTipIcon = ToolTipIcon.None;
@@ -177,6 +226,88 @@ namespace Filosofiya
         {
 
             Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            label2.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void toolStripComboBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (toolStripComboBox3.SelectedIndex == 0)
+            {
+                label2.Show();
+            }
+            else if (toolStripComboBox3.SelectedIndex == 1)
+            {
+                label2.Hide();
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            Рандом(mas, line);
+            if (toolStripComboBox1.SelectedIndex == 0)
+            {
+                Уведомления(цитата);
+            }
+            else if (toolStripComboBox1.SelectedIndex == 1)
+            {
+                Notifier();
+            }
+            else if (toolStripComboBox1.SelectedIndex == 2)
+            {
+
+            }
+            Получение_изображение_об_авторе();
+        }
+
+        private void toolStripComboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (toolStripComboBox4.SelectedIndex == 0 )
+            {
+                timer2.Start();
+                timer2.Interval = Convert.ToInt32(Data.Value);
+                button1.Hide();
+            }
+           else if (toolStripComboBox4.SelectedIndex == 1)
+            {
+                timer2.Stop();
+                button1.Show();
+            }    
+        }
+        // открываем текущее настройки
+        int a = 4;
+        int b = 2;
+        public void записатьЦитатуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Настройки form4 = new Настройки(this.a);
+            form4.ShowDialog();
+        }
+
+        private void таймерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Настройки form4 = new Настройки(this.b);
+            form4.Show();
+        }
+
+        private void ТаймерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void настройкиШрифтаЧасовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            label2.Font = fontDialog1.Font;
+        }
+
+        private void настройкиШрифтаЦитатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            label1.Font = fontDialog1.Font;
         }
     }
 }

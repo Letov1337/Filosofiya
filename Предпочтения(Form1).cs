@@ -16,6 +16,7 @@ namespace Filosofiya
         public Предпочтения()
         {
             InitializeComponent();
+            label1.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,14 +31,40 @@ namespace Filosofiya
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            основное1 f2 = new основное1();
-            this.Hide();
-            f2.Show();
+            if ((checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false))
+            {
+                label1.Show();
+                label1.Text = "Выберите предпочтения!";
+            }
+            else
+            {
+                if (checkBox1.Checked == true)
+                {
+                    Data.Предпочтения_значение = 1;
+                }
+                if (checkBox2.Checked == true)
+                {
+                    Data.Предпочтения_значение = 2;
+                }
+                if (checkBox1.Checked & checkBox2.Checked == true)
+                {
+                    Data.Предпочтения_значение = 12;
+                }
+                основное1 f2 = new основное1();
+                f2.Show();
+                
+            }
+            
         }
 
         private void Предпочтения_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Предпочтения_Validating(object sender, CancelEventArgs e)
+        {
+           
         }
     }
 }

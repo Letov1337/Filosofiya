@@ -6,6 +6,11 @@ using System.Windows.Forms;
 
 namespace Filosofiya
 {
+    static class Data
+    {
+        public static float Value { get; set; }
+        public static int Предпочтения_значение { get; set; }
+    }
     static class Program
     {
         /// <summary>
@@ -18,5 +23,6 @@ namespace Filosofiya
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Предпочтения());
         }
+       
     }
 }
