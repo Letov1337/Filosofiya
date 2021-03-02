@@ -51,7 +51,9 @@ namespace Filosofiya
                     Data.Предпочтения_значение = 12;
                 }
                 основное1 f2 = new основное1();
+                this.Hide();
                 f2.Show();
+               
                 
             }
             
