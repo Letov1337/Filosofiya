@@ -34,6 +34,13 @@ namespace Filosofiya
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -89,12 +96,98 @@ namespace Filosofiya
             this.label1.TabIndex = 7;
             this.label1.Text = "label1";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(482, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 19);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "По эпохам:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(292, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 19);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "По типам мировоззрения:";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.BackColor = System.Drawing.Color.White;
+            this.checkBox5.Location = new System.Drawing.Point(486, 140);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(171, 17);
+            this.checkBox5.TabIndex = 14;
+            this.checkBox5.Text = "Философы Нового Времени";
+            this.checkBox5.UseVisualStyleBackColor = false;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.BackColor = System.Drawing.Color.White;
+            this.checkBox4.Location = new System.Drawing.Point(486, 117);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(164, 17);
+            this.checkBox4.TabIndex = 13;
+            this.checkBox4.Text = "Средневековые философы";
+            this.checkBox4.UseVisualStyleBackColor = false;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.BackColor = System.Drawing.Color.White;
+            this.checkBox6.Location = new System.Drawing.Point(486, 94);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(132, 17);
+            this.checkBox6.TabIndex = 12;
+            this.checkBox6.Text = "Античные философы";
+            this.checkBox6.UseVisualStyleBackColor = false;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.BackColor = System.Drawing.Color.White;
+            this.checkBox7.Location = new System.Drawing.Point(292, 122);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(96, 17);
+            this.checkBox7.TabIndex = 11;
+            this.checkBox7.Text = "Материализм";
+            this.checkBox7.UseVisualStyleBackColor = false;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.BackColor = System.Drawing.Color.White;
+            this.checkBox8.Location = new System.Drawing.Point(292, 99);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(78, 17);
+            this.checkBox8.TabIndex = 10;
+            this.checkBox8.Text = "Идеализм";
+            this.checkBox8.UseVisualStyleBackColor = false;
+            // 
             // Предпочтения
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(455, 254);
+            this.ClientSize = new System.Drawing.Size(913, 488);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.checkBox5);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox6);
+            this.Controls.Add(this.checkBox7);
+            this.Controls.Add(this.checkBox8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox3);
@@ -118,6 +211,13 @@ namespace Filosofiya
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox8;
     }
 }
 
