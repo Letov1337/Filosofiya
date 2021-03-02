@@ -30,9 +30,9 @@ namespace Filosofiya
         {
             InitializeComponent();
             label2.Text = "";
+            label2.Hide();
             timer1.Enabled = true;
             timer1.Interval = 1000;
-            
         }
         
         private void label1_Click(object sender, EventArgs e)
@@ -268,12 +268,14 @@ namespace Filosofiya
         {
             if (toolStripComboBox4.SelectedIndex == 0 )
             {
-                timer2.Start();
+                label2.Show();
                 timer2.Interval = Convert.ToInt32(Data.Value);
+                timer2.Start();
                 button1.Hide();
             }
            else if (toolStripComboBox4.SelectedIndex == 1)
             {
+                label2.Hide();
                 timer2.Stop();
                 button1.Show();
             }    

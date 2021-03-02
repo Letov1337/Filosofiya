@@ -47,7 +47,7 @@ namespace Filosofiya
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(180, 94);
+            this.checkBox1.Location = new System.Drawing.Point(178, 99);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(96, 17);
             this.checkBox1.TabIndex = 0;
@@ -102,7 +102,7 @@ namespace Filosofiya
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(482, 72);
+            this.label3.Location = new System.Drawing.Point(465, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 19);
             this.label3.TabIndex = 16;
@@ -114,7 +114,7 @@ namespace Filosofiya
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(292, 72);
+            this.label2.Location = new System.Drawing.Point(273, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 19);
             this.label2.TabIndex = 15;
@@ -124,7 +124,7 @@ namespace Filosofiya
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.BackColor = System.Drawing.Color.White;
-            this.checkBox5.Location = new System.Drawing.Point(486, 140);
+            this.checkBox5.Location = new System.Drawing.Point(469, 140);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(171, 17);
             this.checkBox5.TabIndex = 14;
@@ -135,7 +135,7 @@ namespace Filosofiya
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.BackColor = System.Drawing.Color.White;
-            this.checkBox4.Location = new System.Drawing.Point(486, 117);
+            this.checkBox4.Location = new System.Drawing.Point(469, 117);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(164, 17);
             this.checkBox4.TabIndex = 13;
@@ -146,7 +146,7 @@ namespace Filosofiya
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.BackColor = System.Drawing.Color.White;
-            this.checkBox6.Location = new System.Drawing.Point(486, 94);
+            this.checkBox6.Location = new System.Drawing.Point(469, 94);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(132, 17);
             this.checkBox6.TabIndex = 12;
@@ -157,7 +157,7 @@ namespace Filosofiya
             // 
             this.checkBox7.AutoSize = true;
             this.checkBox7.BackColor = System.Drawing.Color.White;
-            this.checkBox7.Location = new System.Drawing.Point(292, 122);
+            this.checkBox7.Location = new System.Drawing.Point(290, 127);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(96, 17);
             this.checkBox7.TabIndex = 11;
@@ -168,7 +168,7 @@ namespace Filosofiya
             // 
             this.checkBox8.AutoSize = true;
             this.checkBox8.BackColor = System.Drawing.Color.White;
-            this.checkBox8.Location = new System.Drawing.Point(292, 99);
+            this.checkBox8.Location = new System.Drawing.Point(290, 104);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(78, 17);
             this.checkBox8.TabIndex = 10;

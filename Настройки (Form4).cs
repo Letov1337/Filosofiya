@@ -105,7 +105,7 @@ namespace Filosofiya
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            float time_set = Convert.ToInt32(textBox1.Text);
+           float time_set = Convert.ToInt32(textBox1.Text);
             // проверка на ошибки
             if (comboBox1.SelectedIndex == -1)
             {
@@ -129,6 +129,11 @@ namespace Filosofiya
                 Data.Value = time_set * 1000;
                 label1.Text = "Настройки применены";
             }
+            if (comboBox1.SelectedIndex == 3)
+            {
+                Data.Value = time_set;
+                label1.Text = "Настройки применены";
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,6 +149,7 @@ namespace Filosofiya
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             Считываем();
+            
         }
     }
 }
