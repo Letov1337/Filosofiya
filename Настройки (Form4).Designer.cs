@@ -42,9 +42,14 @@ namespace Filosofiya
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -133,8 +138,8 @@ namespace Filosofiya
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Идеализм",
-            "Материализм"});
+            "Материализм",
+            "Идеализм"});
             this.comboBox2.Location = new System.Drawing.Point(201, 212);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
@@ -173,11 +178,57 @@ namespace Filosofiya
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(1, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(799, 387);
             this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(this.comboBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(791, 361);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Вывод цитаты";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Случайно",
+            "Последовательно"});
+            this.comboBox3.Location = new System.Drawing.Point(322, 63);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(342, 90);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Применить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(272, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(256, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Как вам удобнее выводить цитату?";
             // 
             // Настройки
             // 
@@ -193,6 +244,8 @@ namespace Filosofiya
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -211,5 +264,9 @@ namespace Filosofiya
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

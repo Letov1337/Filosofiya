@@ -53,6 +53,7 @@ namespace Filosofiya
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.выводЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -120,7 +121,8 @@ namespace Filosofiya
             this.уведомленияToolStripMenuItem,
             this.типToolStripMenuItem,
             this.таймерToolStripMenuItem,
-            this.записатьЦитатуToolStripMenuItem});
+            this.записатьЦитатуToolStripMenuItem,
+            this.выводЦитатыToolStripMenuItem});
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.настройкиToolStripMenuItem.Text = "Настройки";
@@ -255,6 +257,13 @@ namespace Filosofiya
             this.timer2.Interval = 60000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // выводЦитатыToolStripMenuItem
+            // 
+            this.выводЦитатыToolStripMenuItem.Name = "выводЦитатыToolStripMenuItem";
+            this.выводЦитатыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выводЦитатыToolStripMenuItem.Text = "Вывод цитаты";
+            this.выводЦитатыToolStripMenuItem.Click += new System.EventHandler(this.выводЦитатыToolStripMenuItem_Click);
+            // 
             // основное1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,5 +313,6 @@ namespace Filosofiya
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.ToolStripMenuItem настройкиШрифтаЧасовToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкиШрифтаЦитатыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выводЦитатыToolStripMenuItem;
     }
 }

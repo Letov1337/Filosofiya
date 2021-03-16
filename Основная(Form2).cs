@@ -20,6 +20,7 @@ namespace Filosofiya
     
     public partial class основное1 : MaterialForm
     {
+        
         private PopupNotifier popup = null;
         string line; // line = mas
         string[] mas; // массив-вывод
@@ -46,18 +47,43 @@ namespace Filosofiya
         }
         public void Рандом(string[] mas, string line)
         {
+            //Data.Выдача_цитат = 1;
             // считываем Sample.txt
+
             if (Data.Предпочтения_значение == 1)
             {
                 StreamReader sr = new StreamReader(@".\Resources\Материализм.txt");
                 line = sr.ReadToEnd();
                 // невьебенный рандом
                 mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
+                if (Data.Выдача_цитат == 0)
+                {
+                    Random rand = new Random();
+                    int num = rand.Next(0, mas.Length);
+                    цитата = mas[num];
+                    Console.WriteLine(цитата);
+                    label1.Text = цитата;
+                }
+                if (Data.Выдача_цитат == 1)
+                {
+                    Random rand = new Random();
+                    int num = rand.Next(0, mas.Length);
+                    цитата = mas[num];
+                    Console.WriteLine(цитата);
+                    label1.Text = цитата;
+                }
+                if (Data.Выдача_цитат == 2)
+                {
+                    //
+                    //
+                    //Допилить
+                    for (int i = 0; i < mas.Length; i++)
+                    {
+                        цитата = mas[i];
+                        Console.WriteLine(цитата);
+                        label1.Text = цитата;
+                    }
+                }
             }
             if (Data.Предпочтения_значение == 2)
             {
@@ -87,7 +113,6 @@ namespace Filosofiya
         }
         public void Автор()
         {
-            // ебанный костыль 
             string test = this.цитата;
             string te = test.Substring(test.LastIndexOf("(") + 1);
             автор = te.Substring(0,te.LastIndexOf(")"));
@@ -283,6 +308,7 @@ namespace Filosofiya
         // открываем текущее настройки
         int a = 4;
         int b = 2;
+        int c = 0;
         public void записатьЦитатуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Настройки form4 = new Настройки(this.a);
@@ -310,6 +336,14 @@ namespace Filosofiya
         {
             fontDialog1.ShowDialog();
             label1.Font = fontDialog1.Font;
+        }
+
+        private void выводЦитатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data.Вкладка = 1;
+            Настройки form4 = new Настройки(this.c);
+            form4.Show();
+            
         }
     }
 }

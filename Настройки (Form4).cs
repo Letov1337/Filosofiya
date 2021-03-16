@@ -82,6 +82,10 @@ namespace Filosofiya
             {
                 tabControl1.SelectedIndex = 1;
             }
+            if (Data.Вкладка == 1 )
+            {
+                tabControl1.SelectedIndex = 2; 
+            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -150,6 +154,23 @@ namespace Filosofiya
         {
             Считываем();
             
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedIndex == 0)
+            {
+                Data.Выдача_цитат = 1; // Случайно
+            }
+            if (comboBox3.SelectedIndex == 1)
+            {
+                Data.Выдача_цитат = 2; // Рандомно
+            }
         }
     }
 }
