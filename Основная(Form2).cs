@@ -26,6 +26,7 @@ namespace Filosofiya
         string[] mas; // массив-вывод
         string цитата; // основной вывод 
         public static string автор;
+        int p;
         private NotifyIcon NI = new NotifyIcon(); // уведомления 2 
         public основное1()
         {
@@ -76,13 +77,18 @@ namespace Filosofiya
                 {
                     //
                     //
-                    //Допилить
-                    for (int i = 0; i < mas.Length; i++)
+                    //Последовательный вывод (костыль)
+                    if(p >= mas.Length)
                     {
-                        цитата = mas[i];
+                        return;
+                    }
+                    else 
+                    {
+                        цитата = mas[p];
                         Console.WriteLine(цитата);
                         label1.Text = цитата;
                     }
+
                 }
             }
             if (Data.Предпочтения_значение == 2)
@@ -193,6 +199,7 @@ namespace Filosofiya
         private void button1_Click(object sender, EventArgs e)
         {
             Все_в_месте();
+            p++;
         }
 
         private void label1_TextChanged(object sender, EventArgs e)
@@ -309,6 +316,7 @@ namespace Filosofiya
         int a = 4;
         int b = 2;
         int c = 0;
+        int d = 1;
         public void записатьЦитатуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Настройки form4 = new Настройки(this.a);
@@ -343,7 +351,15 @@ namespace Filosofiya
             Data.Вкладка = 1;
             Настройки form4 = new Настройки(this.c);
             form4.Show();
+           
             
+        }
+
+        private void обновлениеЦитатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data.Вкладка = 2;
+            Настройки form4 = new Настройки(this.d);
+            form4.Show();
         }
     }
 }

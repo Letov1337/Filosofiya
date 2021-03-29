@@ -43,6 +43,7 @@ namespace Filosofiya
             this.таймерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
             this.записатьЦитатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выводЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.темаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.настройкиШрифтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@ namespace Filosofiya
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.выводЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обновлениеЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -122,7 +123,8 @@ namespace Filosofiya
             this.типToolStripMenuItem,
             this.таймерToolStripMenuItem,
             this.записатьЦитатуToolStripMenuItem,
-            this.выводЦитатыToolStripMenuItem});
+            this.выводЦитатыToolStripMenuItem,
+            this.обновлениеЦитатыToolStripMenuItem});
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.настройкиToolStripMenuItem.Text = "Настройки";
@@ -132,7 +134,7 @@ namespace Filosofiya
             this.уведомленияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.уведомленияToolStripMenuItem.Name = "уведомленияToolStripMenuItem";
-            this.уведомленияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.уведомленияToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.уведомленияToolStripMenuItem.Text = "Тип уведомлений";
             // 
             // toolStripComboBox1
@@ -150,7 +152,7 @@ namespace Filosofiya
             this.типToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox3});
             this.типToolStripMenuItem.Name = "типToolStripMenuItem";
-            this.типToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.типToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.типToolStripMenuItem.Text = "Часы";
             // 
             // toolStripComboBox3
@@ -169,7 +171,7 @@ namespace Filosofiya
             this.таймерToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox4});
             this.таймерToolStripMenuItem.Name = "таймерToolStripMenuItem";
-            this.таймерToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.таймерToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.таймерToolStripMenuItem.Text = "Таймер";
             this.таймерToolStripMenuItem.Click += new System.EventHandler(this.таймерToolStripMenuItem_Click);
             // 
@@ -186,9 +188,16 @@ namespace Filosofiya
             // записатьЦитатуToolStripMenuItem
             // 
             this.записатьЦитатуToolStripMenuItem.Name = "записатьЦитатуToolStripMenuItem";
-            this.записатьЦитатуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.записатьЦитатуToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.записатьЦитатуToolStripMenuItem.Text = "Записать цитату";
             this.записатьЦитатуToolStripMenuItem.Click += new System.EventHandler(this.записатьЦитатуToolStripMenuItem_Click);
+            // 
+            // выводЦитатыToolStripMenuItem
+            // 
+            this.выводЦитатыToolStripMenuItem.Name = "выводЦитатыToolStripMenuItem";
+            this.выводЦитатыToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.выводЦитатыToolStripMenuItem.Text = "Вывод цитаты";
+            this.выводЦитатыToolStripMenuItem.Click += new System.EventHandler(this.выводЦитатыToolStripMenuItem_Click);
             // 
             // темаToolStripMenuItem
             // 
@@ -257,12 +266,12 @@ namespace Filosofiya
             this.timer2.Interval = 60000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // выводЦитатыToolStripMenuItem
+            // обновлениеЦитатыToolStripMenuItem
             // 
-            this.выводЦитатыToolStripMenuItem.Name = "выводЦитатыToolStripMenuItem";
-            this.выводЦитатыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.выводЦитатыToolStripMenuItem.Text = "Вывод цитаты";
-            this.выводЦитатыToolStripMenuItem.Click += new System.EventHandler(this.выводЦитатыToolStripMenuItem_Click);
+            this.обновлениеЦитатыToolStripMenuItem.Name = "обновлениеЦитатыToolStripMenuItem";
+            this.обновлениеЦитатыToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.обновлениеЦитатыToolStripMenuItem.Text = "Обновление цитаты";
+            this.обновлениеЦитатыToolStripMenuItem.Click += new System.EventHandler(this.обновлениеЦитатыToolStripMenuItem_Click);
             // 
             // основное1
             // 
@@ -314,5 +323,6 @@ namespace Filosofiya
         private System.Windows.Forms.ToolStripMenuItem настройкиШрифтаЧасовToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкиШрифтаЦитатыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выводЦитатыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обновлениеЦитатыToolStripMenuItem;
     }
 }
