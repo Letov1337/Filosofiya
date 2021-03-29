@@ -47,10 +47,13 @@ namespace Filosofiya
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -239,6 +242,9 @@ namespace Filosofiya
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button7);
+            this.tabPage4.Controls.Add(this.button6);
+            this.tabPage4.Controls.Add(this.textBox2);
             this.tabPage4.Controls.Add(this.listBox1);
             this.tabPage4.Controls.Add(this.progressBar1);
             this.tabPage4.Controls.Add(this.label4);
@@ -251,33 +257,13 @@ namespace Filosofiya
             this.tabPage4.Text = "Обновление цитат";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // textBox2
             // 
-            this.button5.Location = new System.Drawing.Point(295, 146);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 23);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Обновить";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(292, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 17);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Обновление цитаты";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(295, 117);
-            this.progressBar1.Maximum = 20;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(149, 23);
-            this.progressBar1.TabIndex = 3;
+            this.textBox2.Location = new System.Drawing.Point(295, 241);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(149, 20);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.Text = "url";
             // 
             // listBox1
             // 
@@ -289,6 +275,54 @@ namespace Filosofiya
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(149, 56);
             this.listBox1.TabIndex = 4;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(295, 117);
+            this.progressBar1.Maximum = 20;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(149, 23);
+            this.progressBar1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(292, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Обновление цитаты";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(295, 146);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(149, 23);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Обновить";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(295, 175);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(149, 22);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Обновить ссылки";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(333, 267);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 21);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Загрузить";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Настройки
             // 
@@ -335,5 +369,8 @@ namespace Filosofiya
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
     }
 }

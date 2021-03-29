@@ -21,7 +21,6 @@ namespace Filosofiya
     {
         
 
-        
         public void Считываем()
         {
             if (comboBox2.SelectedIndex == -1)
@@ -78,8 +77,9 @@ namespace Filosofiya
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            if(data == 4)
+            textBox2.Hide();
+            button7.Hide();
+            if (data == 4)
             {
                 tabControl1.SelectedIndex = 0;
             }
@@ -148,64 +148,120 @@ namespace Filosofiya
                 label1.Text = "Настройки применены";
             }
         }
-        public void ping ()
+        string url;
+        string url2;
+        public void proverka_url (string url2)
         {
-            var request = (HttpWebRequest)WebRequest.Create("http://g.cn/generate_204");
-            request.UserAgent = "Android";
-            request.KeepAlive = false;
-            request.Timeout = 1500;
-            
             try
             {
-                label4.Text = "Проверяем доступ к  интернету...";
-                Thread.Sleep(1500);
-                progressBar1.Value = 3;
-                using (var response = (HttpWebResponse)request.GetResponse())
-                   {
-                    if (response.ContentLength == 0 && response.StatusCode == HttpStatusCode.NoContent)
+                if (!string.IsNullOrEmpty(url2))
+                {
+                    UriBuilder uriBuilder = new UriBuilder(url2);
+                    HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(uriBuilder.Uri);
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    if (response.StatusCode == HttpStatusCode.NotFound)
                     {
-                        
-                        progressBar1.Value = 10;
-                        int a = 15;
-                        if (progressBar1.Value < a)
-                        {
-                        label4.Text = "Происходит обновление цитаты..";
-                        Thread.Sleep(1500);
-                        WebClient wc = new WebClient();
-                        if(listBox1.SelectedIndex == 0)
-                         {
-                                string url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
-                                string save_path = @".\Resources\";
-                                string name = "Материализм.txt";
-                                wc.DownloadFile(url, save_path + name);
-                                progressBar1.Value = 20;
-                                label4.Text = "Успешно обновлено";
-                                MessageBox.Show("Успешно обновлено:" + name);
-                            }
-                        if(listBox1.SelectedIndex == 1)
-                         {
-                                string url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
-                                string save_path = @".\Resources\";
-                                string name = "Идеализм.txt";
-                                wc.DownloadFile(url, save_path + name);
-                                progressBar1.Value = 20;
-                                label4.Text = "Успешно обновлено";
-                                MessageBox.Show("Успешно обновлено:" + name);
-                            }
-                       
-                        }
-                     }
-                    else
+                        MessageBox.Show("Данный url не подходит");
+                    }
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    { 
+                        MessageBox.Show("Успешно!");
+                    }
+                    else //There are a lot of other status codes you could check for...
                     {
-                        MessageBox.Show("not ok");
-                        progressBar1.Value = 0;
+                        MessageBox.Show(string.Format("Данный url не подходит.",
+                                                   response.StatusCode.ToString()));
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("not ok");
-                progressBar1.Value = 0;
+                MessageBox.Show(string.Format("Broken- Other error: {0}", ex.Message));
+            }
+        }
+        public void ping()
+        {
+            if (listBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Воспользуйтесь списком");
+            }
+            else
+            {
+                var request = (HttpWebRequest)WebRequest.Create("http://g.cn/generate_204");
+                request.UserAgent = "Android";
+                request.KeepAlive = false;
+                request.Timeout = 1500;
+
+                try
+                {
+                    label4.Text = "Проверяем доступ к  интернету...";
+                    Thread.Sleep(1500);
+                    progressBar1.Value = 3;
+                    using (var response = (HttpWebResponse)request.GetResponse())
+                    {
+
+                        if (response.ContentLength == 0 && response.StatusCode == HttpStatusCode.NoContent)
+                        {
+
+                            progressBar1.Value = 10;
+                            int a = 15;
+                            if (progressBar1.Value < a)
+                            {
+                                label4.Text = "Происходит обновление цитаты..";
+                                Thread.Sleep(1500);
+                                WebClient wc = new WebClient();
+
+                                if (listBox1.SelectedIndex == 0)
+                                {
+                                    if (button_1 == 0)
+                                    {
+                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
+                                    }
+                                    else if (button_1 == 1)
+                                    {
+                                        url = url2;
+                                        button_1 = button_1 - 1;
+                                    }
+                                    string save_path = @".\Resources\";
+                                    string name = "Материализм.txt";
+                                    wc.DownloadFile(url, save_path + name);
+                                    progressBar1.Value = 20;
+                                    label4.Text = "Успешно обновлено";
+                                    MessageBox.Show("Успешно обновлено:" + name);
+                                }
+                                if (listBox1.SelectedIndex == 1)
+                                {
+                                    if (button_1 == 0)
+                                    {
+                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
+                                    }
+                                    else if (button_1 == 1)
+                                    {
+                                        url = url2;
+                                        button_1 = button_1 - 1;
+                                    }
+                                    string save_path = @".\Resources\";
+                                    string name = "Идеализм.txt";
+                                    wc.DownloadFile(url, save_path + name);
+                                    progressBar1.Value = 20;
+                                    label4.Text = "Успешно обновлено";
+                                    MessageBox.Show("Успешно обновлено:" + name);
+                                }
+
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("not ok");
+                            progressBar1.Value = 0;
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("not ok");
+                    progressBar1.Value = 0;
+                }
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -240,12 +296,42 @@ namespace Filosofiya
                 Data.Выдача_цитат = 2; // Рандомно
             }
         }
-        int p; // счетчек для прогресс бара
         private void button5_Click(object sender, EventArgs e)
         {
-
-            p++;
             ping();
+        }
+        int button_1 = 0; // Если у нас сработала кнопка
+        
+        
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Выберете из списка!");
+            }
+            else
+            {
+                url2 = textBox2.Text;
+                proverka_url(url2);
+                button_1 = 1;
+            }
+        }
+        int button_2 = 0;// Если у нас сработала кнопка
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            if (button_2 == 0)
+            {
+                button_2 = button_2 + 1;
+                textBox2.Show();
+                button7.Show();
+            }
+            else
+            {
+                button_2 = button_2 - 1;
+                textBox2.Hide();
+                button7.Hide();
+            }
         }
     }
 }

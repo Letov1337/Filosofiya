@@ -44,6 +44,7 @@ namespace Filosofiya
             this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
             this.записатьЦитатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выводЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обновлениеЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.темаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.настройкиШрифтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@ namespace Filosofiya
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.обновлениеЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -104,7 +104,7 @@ namespace Filosofiya
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Azure;
+            this.menuStrip1.BackColor = System.Drawing.Color.AliceBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.настройкиToolStripMenuItem,
             this.темаToolStripMenuItem,
@@ -199,6 +199,13 @@ namespace Filosofiya
             this.выводЦитатыToolStripMenuItem.Text = "Вывод цитаты";
             this.выводЦитатыToolStripMenuItem.Click += new System.EventHandler(this.выводЦитатыToolStripMenuItem_Click);
             // 
+            // обновлениеЦитатыToolStripMenuItem
+            // 
+            this.обновлениеЦитатыToolStripMenuItem.Name = "обновлениеЦитатыToolStripMenuItem";
+            this.обновлениеЦитатыToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.обновлениеЦитатыToolStripMenuItem.Text = "Обновление цитаты";
+            this.обновлениеЦитатыToolStripMenuItem.Click += new System.EventHandler(this.обновлениеЦитатыToolStripMenuItem_Click);
+            // 
             // темаToolStripMenuItem
             // 
             this.темаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -265,13 +272,6 @@ namespace Filosofiya
             // 
             this.timer2.Interval = 60000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // обновлениеЦитатыToolStripMenuItem
-            // 
-            this.обновлениеЦитатыToolStripMenuItem.Name = "обновлениеЦитатыToolStripMenuItem";
-            this.обновлениеЦитатыToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.обновлениеЦитатыToolStripMenuItem.Text = "Обновление цитаты";
-            this.обновлениеЦитатыToolStripMenuItem.Click += new System.EventHandler(this.обновлениеЦитатыToolStripMenuItem_Click);
             // 
             // основное1
             // 

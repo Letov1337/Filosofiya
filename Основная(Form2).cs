@@ -15,6 +15,9 @@ using MaterialSkin.Controls;
 using MaterialSkin;
 using System.Threading;
 using System.Timers;
+using System.Net.Sockets;
+using System.Net.NetworkInformation;
+using System.Net.Http;
 namespace Filosofiya
 {
     
@@ -57,6 +60,7 @@ namespace Filosofiya
                 line = sr.ReadToEnd();
                 // невьебенный рандом
                 mas = line.Split('\n');
+                sr.Close();
                 if (Data.Выдача_цитат == 0)
                 {
                     Random rand = new Random();
@@ -88,7 +92,7 @@ namespace Filosofiya
                         Console.WriteLine(цитата);
                         label1.Text = цитата;
                     }
-
+                    
                 }
             }
             if (Data.Предпочтения_значение == 2)
@@ -97,17 +101,21 @@ namespace Filosofiya
                 line = sr.ReadToEnd();
                 // невьебенный рандом
                 mas = line.Split('\n');
+                sr.Close();
                 Random rand = new Random();
                 int num = rand.Next(0, mas.Length);
                 цитата = mas[num];
                 Console.WriteLine(цитата);
                 label1.Text = цитата;
+                ;
             }
             if (Data.Предпочтения_значение == 12 )
             {
                 StreamReader sr = new StreamReader(@".\Resources\Идеализм.txt");
                 StreamReader sr1 = new StreamReader(@".\Resources\Материализм.txt");
                 line = sr.ReadToEnd() + "\n"+ sr1.ReadToEnd();
+                sr1.Close();
+                sr.Close();
                 // невьебенный рандом
                 mas = line.Split('\n');
                 Random rand = new Random();
@@ -115,26 +123,58 @@ namespace Filosofiya
                 цитата = mas[num];
                 Console.WriteLine(цитата);
                 label1.Text = цитата;
+                
             }
         }
         public void Автор()
         {
-            string test = this.цитата;
-            string te = test.Substring(test.LastIndexOf("(") + 1);
-            автор = te.Substring(0,te.LastIndexOf(")"));
-            linkLabel1.Text = автор;
+            try
+            {
+                string test = this.цитата;
+                string te = test.Substring(test.LastIndexOf("(") + 1);
+                автор = te.Substring(0, te.LastIndexOf(")"));
+                linkLabel1.Text = автор;
+            }
+            catch
+            {
+                var request = (HttpWebRequest)WebRequest.Create("http://g.cn/generate_204");
+                request.UserAgent = "Android";
+                request.KeepAlive = false;
+                request.Timeout = 1500;
+                using (var response = (HttpWebResponse)request.GetResponse())
+                {
+
+                    if (response.ContentLength == 0 && response.StatusCode == HttpStatusCode.NoContent)
+                    {
+                        MessageBox.Show("Почему-то не удается загрузить цитаты...\n" + "Пытаюсь исправить");
+                        WebClient wc = new WebClient();
+                        string url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
+                        string save_path = @".\Resources\";
+                        string name = "Идеализм.txt";
+                        wc.DownloadFile(url, save_path + name);
+                        WebClient wc2 = new WebClient();
+                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
+                        string save_path2 = @".\Resources\";
+                        string name2 = "Материализм.txt";
+                        wc2.DownloadFile(url, save_path2 + name2);
+                        MessageBox.Show("Файлы восстановлены:" + name + name2);
+                    }
+                }
+                
+            }
         }
         public void Узнать_об_авторе()
         {
             Браузер_Form3_ f3 = new Браузер_Form3_();
             f3.Show();
         }
+        string Ницще = @".\Resources\ницше.jpg";
+        string Декарт = @".\Resources\декарт.jpg";
+        string Лейбниц = @".\Resources\лейбниц.jpg";
+        string Test = @".\Resources\1.jpg";
         public void Получение_изображение_об_авторе()
         {
-            string Ницще = @".\Resources\ницше.jpg";
-            string Декарт = @".\Resources\декарт.jpg";
-            string Лейбниц = @".\Resources\лейбниц.jpg";
-            string Test = @".\Resources\1.jpg";
+            
                     if (автор == "Ницше")
                     {
                         pictureBox1.Image = null;
@@ -168,15 +208,16 @@ namespace Filosofiya
         public void Уведомления(string цитата)
         {
             popup = new PopupNotifier();
-            popup.Image = Properties.Resources.Image1;
+            //popup.Image = Properties.Resources.Image1;
             popup.ImageSize = new Size(96, 96); // размер изображения
-            popup.TitleText = "test";
-            popup.HeaderColor = Color.Blue; // цвет верхушки
-            popup.BodyColor = Color.Blue;  // основной цвет
+            popup.TitleText = цитата;
+            popup.HeaderColor = Color.White; // цвет верхушки
+            popup.BodyColor = Color.White;  // основной цвет
             popup.AnimationInterval = 20; // скорость анимации
             popup.ContentText = цитата;
             popup.ContentFont = new Font("Times New Roman", 18); // цвет заголовка
             popup.TitleFont = new Font("Times New Roman", 18); // цвет основн. текста
+            popup.TitleColor = Color.Black; //цвет текста
             popup.Popup();
         }
         public void Все_в_месте()
@@ -222,7 +263,7 @@ namespace Filosofiya
         public void Notifier()
         {
             Рандом(mas, line);
-            NI.BalloonTipText = "Ницше нассал в ботинок";
+            NI.BalloonTipText = "Цитата:";
             NI.BalloonTipTitle = цитата;
             NI.BalloonTipIcon = ToolTipIcon.None;
             NI.Icon = new Icon(@".\Resources\povezlo.ico");

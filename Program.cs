@@ -23,8 +23,8 @@ namespace Filosofiya
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new основное1());
-            //Application.Run(new Предпочтения());
+            //Application.Run(new основное1());
+            Application.Run(new Предпочтения());
         }
        
     }
