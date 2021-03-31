@@ -57,32 +57,32 @@ namespace Filosofiya
                 
             }
             //все 5 / идеал матер / 3 эпохи
-            if (checkBoxIdeal.Checked == true & checkBoxMater.Checked == true & checkBoxAntique.Checked == true & checkBoxMiddleAges.Checked == true & checkBoxNewTime.Checked == true | checkBoxIdeal.Checked == true & checkBoxMater.Checked == true | checkBoxAntique.Checked == true & checkBoxMiddleAges.Checked == true & checkBoxNewTime.Checked == true)
+            if (checkBoxIdeal.Checked == true & checkBoxMater.Checked == true & checkBoxAntique.Checked == true & checkBoxMiddleAges.Checked == true & checkBoxNewTime.Checked == true | checkBoxIdeal.Checked == true & checkBoxMater.Checked == true & checkBoxAntique.Checked == false & checkBoxMiddleAges.Checked == false & checkBoxNewTime.Checked == false | checkBoxAntique.Checked == true & checkBoxMiddleAges.Checked == true & checkBoxNewTime.Checked == true & checkBoxIdeal.Checked == false & checkBoxMater.Checked == false)
             {
                 Data.Предпочтения_значение = 1;
             }
             //Idealizm
-            if (checkBoxIdeal.Checked == true)
+            if (checkBoxIdeal.Checked == true & checkBoxMater.Checked == false & checkBoxAntique.Checked == false & checkBoxMiddleAges.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 2;
             }
             //Materializm
-            if (checkBoxMater.Checked == true)
+            if (checkBoxMater.Checked == true & checkBoxIdeal.Checked == false & checkBoxAntique.Checked == false & checkBoxMiddleAges.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 3;
             }
             //Antique
-            if (checkBoxAntique.Checked == true)
+            if (checkBoxAntique.Checked == true & checkBoxMater.Checked == false & checkBoxIdeal.Checked == false & checkBoxMiddleAges.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 4;
             }
             //Middle ages
-            if (checkBoxMiddleAges.Checked == true)
+            if (checkBoxMiddleAges.Checked == true & checkBoxMater.Checked == false & checkBoxIdeal.Checked == false & checkBoxAntique.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 5;
             }
             //Новое время
-            if (checkBoxNewTime.Checked)
+            if (checkBoxNewTime.Checked & checkBoxMater.Checked == false & checkBoxIdeal.Checked == false & checkBoxAntique.Checked == false & checkBoxMiddleAges.Checked == false)
             {
                 Data.Предпочтения_значение = 6;
             }
@@ -197,7 +197,7 @@ namespace Filosofiya
                 Data.Предпочтения_значение = 28;
             }
             //3 эпохи + Idealizm
-            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxIdeal.Checked)
+            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxIdeal.Checked & checkBoxIdeal.Checked == false & checkBoxMater.Checked == false)
             {
                 Data.Предпочтения_значение = 29;
             }
