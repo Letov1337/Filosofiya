@@ -56,7 +56,127 @@ namespace Filosofiya
                
                 
             }
-            
+            //все 5 / идеал матер / 3 эпохи
+            if (checkBoxIdeal.Checked == true & checkBoxMater.Checked == true & checkBoxAntique.Checked == true & checkBoxMiddleAges.Checked == true & checkBoxNewTime.Checked == true | checkBoxIdeal.Checked == true & checkBoxMater.Checked == true | checkBoxAntique.Checked == true & checkBoxMiddleAges.Checked == true & checkBoxNewTime.Checked == true)
+            {
+                Data.Предпочтения_значение = 1;
+            }
+            //Idealizm
+            if (checkBoxIdeal.Checked == true)
+            {
+                Data.Предпочтения_значение = 2;
+            }
+            //Materializm
+            if (checkBoxMater.Checked == true)
+            {
+                Data.Предпочтения_значение = 3;
+            }
+            //Antique
+            if (checkBoxAntique.Checked == true)
+            {
+                Data.Предпочтения_значение = 4;
+            }
+            //Middle ages
+            if (checkBoxMiddleAges.Checked == true)
+            {
+                Data.Предпочтения_значение = 5;
+            }
+            //Новое время
+            if (checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 6;
+            }
+            //Ideal + antique
+            if (checkBoxIdeal.Checked & checkBoxAntique.Checked)
+            {
+                Data.Предпочтения_значение = 7;
+            }
+            //Ideal + Middle Ages
+            if (checkBoxIdeal.Checked & checkBoxMiddleAges.Checked)
+            {
+                Data.Предпочтения_значение = 8;
+            }
+            //Ideal + new time
+            if (checkBoxIdeal.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 9;
+            }
+            //Mater + antique
+            if (checkBoxMater.Checked & checkBoxAntique.Checked)
+            {
+                Data.Предпочтения_значение = 10;
+            }
+            //Mater + Middle Ages
+            if (checkBoxMater.Checked & checkBoxMiddleAges.Checked)
+            {
+                Data.Предпочтения_значение = 11;
+            }
+            //Mater + new time
+            if (checkBoxMater.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 12;
+            }
+            //Antique + Middle ages
+            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked)
+            {
+                Data.Предпочтения_значение = 13;
+            }
+            //antique + new time
+            if (checkBoxAntique.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 14;
+            }
+            //Middle ages + new time
+            if (checkBoxMiddleAges.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 15;
+            }
+            //Ideal mater antique
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked)
+            {
+                Data.Предпочтения_значение = 16;
+            }
+            //Ideal mater middle age
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxMiddleAges.Checked)
+            {
+                Data.Предпочтения_значение = 17;
+            }
+            //Ideal mater new time
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 18;
+            }
+            //ideal antique middle age
+            if (checkBoxIdeal.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked)
+            {
+                Data.Предпочтения_значение = 19;
+            }
+            //ideal middle age new time
+            if (checkBoxIdeal.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 20;
+            }
+            //ideal antique new time
+            if (checkBoxIdeal.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 21;
+            }
+            //mater antique middle age
+            if (checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked)
+            {
+                Data.Предпочтения_значение = 22;
+            }
+            //mater middle age new time
+            if (checkBoxMater.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 23;
+            }
+            //mater antique new time
+            if (checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 24;
+            }
+
         }
 
         private void Предпочтения_Load(object sender, EventArgs e)

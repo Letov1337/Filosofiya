@@ -36,11 +36,11 @@ namespace Filosofiya
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBoxNewTime = new System.Windows.Forms.CheckBox();
+            this.checkBoxMiddleAges = new System.Windows.Forms.CheckBox();
+            this.checkBoxAntique = new System.Windows.Forms.CheckBox();
+            this.checkBoxMater = new System.Windows.Forms.CheckBox();
+            this.checkBoxIdeal = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -120,60 +120,60 @@ namespace Filosofiya
             this.label2.TabIndex = 15;
             this.label2.Text = "По типам мировоззрения:";
             // 
-            // checkBox5
+            // checkBoxNewTime
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.White;
-            this.checkBox5.Location = new System.Drawing.Point(469, 140);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(171, 17);
-            this.checkBox5.TabIndex = 14;
-            this.checkBox5.Text = "Философы Нового Времени";
-            this.checkBox5.UseVisualStyleBackColor = false;
+            this.checkBoxNewTime.AutoSize = true;
+            this.checkBoxNewTime.BackColor = System.Drawing.Color.White;
+            this.checkBoxNewTime.Location = new System.Drawing.Point(469, 140);
+            this.checkBoxNewTime.Name = "checkBoxNewTime";
+            this.checkBoxNewTime.Size = new System.Drawing.Size(171, 17);
+            this.checkBoxNewTime.TabIndex = 14;
+            this.checkBoxNewTime.Text = "Философы Нового Времени";
+            this.checkBoxNewTime.UseVisualStyleBackColor = false;
             // 
-            // checkBox4
+            // checkBoxMiddleAges
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.White;
-            this.checkBox4.Location = new System.Drawing.Point(469, 117);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(164, 17);
-            this.checkBox4.TabIndex = 13;
-            this.checkBox4.Text = "Средневековые философы";
-            this.checkBox4.UseVisualStyleBackColor = false;
+            this.checkBoxMiddleAges.AutoSize = true;
+            this.checkBoxMiddleAges.BackColor = System.Drawing.Color.White;
+            this.checkBoxMiddleAges.Location = new System.Drawing.Point(469, 117);
+            this.checkBoxMiddleAges.Name = "checkBoxMiddleAges";
+            this.checkBoxMiddleAges.Size = new System.Drawing.Size(164, 17);
+            this.checkBoxMiddleAges.TabIndex = 13;
+            this.checkBoxMiddleAges.Text = "Средневековые философы";
+            this.checkBoxMiddleAges.UseVisualStyleBackColor = false;
             // 
-            // checkBox6
+            // checkBoxAntique
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.White;
-            this.checkBox6.Location = new System.Drawing.Point(469, 94);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(132, 17);
-            this.checkBox6.TabIndex = 12;
-            this.checkBox6.Text = "Античные философы";
-            this.checkBox6.UseVisualStyleBackColor = false;
+            this.checkBoxAntique.AutoSize = true;
+            this.checkBoxAntique.BackColor = System.Drawing.Color.White;
+            this.checkBoxAntique.Location = new System.Drawing.Point(469, 94);
+            this.checkBoxAntique.Name = "checkBoxAntique";
+            this.checkBoxAntique.Size = new System.Drawing.Size(132, 17);
+            this.checkBoxAntique.TabIndex = 12;
+            this.checkBoxAntique.Text = "Античные философы";
+            this.checkBoxAntique.UseVisualStyleBackColor = false;
             // 
-            // checkBox7
+            // checkBoxMater
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.Color.White;
-            this.checkBox7.Location = new System.Drawing.Point(290, 127);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(96, 17);
-            this.checkBox7.TabIndex = 11;
-            this.checkBox7.Text = "Материализм";
-            this.checkBox7.UseVisualStyleBackColor = false;
+            this.checkBoxMater.AutoSize = true;
+            this.checkBoxMater.BackColor = System.Drawing.Color.White;
+            this.checkBoxMater.Location = new System.Drawing.Point(290, 127);
+            this.checkBoxMater.Name = "checkBoxMater";
+            this.checkBoxMater.Size = new System.Drawing.Size(96, 17);
+            this.checkBoxMater.TabIndex = 11;
+            this.checkBoxMater.Text = "Материализм";
+            this.checkBoxMater.UseVisualStyleBackColor = false;
             // 
-            // checkBox8
+            // checkBoxIdeal
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.Color.White;
-            this.checkBox8.Location = new System.Drawing.Point(290, 104);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(78, 17);
-            this.checkBox8.TabIndex = 10;
-            this.checkBox8.Text = "Идеализм";
-            this.checkBox8.UseVisualStyleBackColor = false;
+            this.checkBoxIdeal.AutoSize = true;
+            this.checkBoxIdeal.BackColor = System.Drawing.Color.White;
+            this.checkBoxIdeal.Location = new System.Drawing.Point(290, 104);
+            this.checkBoxIdeal.Name = "checkBoxIdeal";
+            this.checkBoxIdeal.Size = new System.Drawing.Size(78, 17);
+            this.checkBoxIdeal.TabIndex = 10;
+            this.checkBoxIdeal.Text = "Идеализм";
+            this.checkBoxIdeal.UseVisualStyleBackColor = false;
             // 
             // Предпочтения
             // 
@@ -183,11 +183,11 @@ namespace Filosofiya
             this.ClientSize = new System.Drawing.Size(913, 488);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox8);
+            this.Controls.Add(this.checkBoxNewTime);
+            this.Controls.Add(this.checkBoxMiddleAges);
+            this.Controls.Add(this.checkBoxAntique);
+            this.Controls.Add(this.checkBoxMater);
+            this.Controls.Add(this.checkBoxIdeal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox3);
@@ -213,11 +213,11 @@ namespace Filosofiya
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBoxNewTime;
+        private System.Windows.Forms.CheckBox checkBoxMiddleAges;
+        private System.Windows.Forms.CheckBox checkBoxAntique;
+        private System.Windows.Forms.CheckBox checkBoxMater;
+        private System.Windows.Forms.CheckBox checkBoxIdeal;
     }
 }
 
