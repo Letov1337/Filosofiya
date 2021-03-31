@@ -176,7 +176,32 @@ namespace Filosofiya
             {
                 Data.Предпочтения_значение = 24;
             }
-
+            //ideal mater antique middle age
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked)
+            {
+                Data.Предпочтения_значение = 25;
+            }
+            //ideal mater antique new time 
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 26;
+            }
+            //ideal mater middle ages new time 
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked)
+            {
+                Data.Предпочтения_значение = 27;
+            }
+            //3 эпохи + матер
+            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxMater.Checked)
+            {
+                Data.Предпочтения_значение = 28;
+            }
+            //3 эпохи + Idealizm
+            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxIdeal.Checked)
+            {
+                Data.Предпочтения_значение = 29;
+            }
+            MessageBox.Show(Data.Предпочтения_значение.ToString());
         }
 
         private void Предпочтения_Load(object sender, EventArgs e)
