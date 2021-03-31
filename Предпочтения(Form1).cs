@@ -87,117 +87,117 @@ namespace Filosofiya
                 Data.Предпочтения_значение = 6;
             }
             //Ideal + antique
-            if (checkBoxIdeal.Checked & checkBoxAntique.Checked)
+            if (checkBoxIdeal.Checked & checkBoxAntique.Checked & checkBoxMater.Checked == false & checkBoxMiddleAges.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 7;
             }
             //Ideal + Middle Ages
-            if (checkBoxIdeal.Checked & checkBoxMiddleAges.Checked)
+            if (checkBoxIdeal.Checked & checkBoxMiddleAges.Checked & checkBoxMater.Checked == false & checkBoxAntique.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 8;
             }
             //Ideal + new time
-            if (checkBoxIdeal.Checked & checkBoxNewTime.Checked)
+            if (checkBoxIdeal.Checked & checkBoxNewTime.Checked & checkBoxMater.Checked == false & checkBoxAntique.Checked == false & checkBoxMiddleAges.Checked == false)
             {
                 Data.Предпочтения_значение = 9;
             }
             //Mater + antique
-            if (checkBoxMater.Checked & checkBoxAntique.Checked)
+            if (checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxIdeal.Checked == false & checkBoxMiddleAges.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 10;
             }
             //Mater + Middle Ages
-            if (checkBoxMater.Checked & checkBoxMiddleAges.Checked)
+            if (checkBoxMater.Checked & checkBoxMiddleAges.Checked & checkBoxIdeal.Checked == false & checkBoxAntique.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 11;
             }
             //Mater + new time
-            if (checkBoxMater.Checked & checkBoxNewTime.Checked)
+            if (checkBoxMater.Checked & checkBoxNewTime.Checked & checkBoxIdeal.Checked == false & checkBoxAntique.Checked == false & checkBoxMiddleAges.Checked == false)
             {
                 Data.Предпочтения_значение = 12;
             }
             //Antique + Middle ages
-            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked)
+            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxMater.Checked == false & checkBoxIdeal.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 13;
             }
-            //antique + new time
-            if (checkBoxAntique.Checked & checkBoxNewTime.Checked)
+            //Antique + new time
+            if (checkBoxAntique.Checked & checkBoxNewTime.Checked & checkBoxMater.Checked == false & checkBoxIdeal.Checked == false & checkBoxMiddleAges.Checked == false)
             {
                 Data.Предпочтения_значение = 14;
             }
             //Middle ages + new time
-            if (checkBoxMiddleAges.Checked & checkBoxNewTime.Checked)
+            if (checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxMater.Checked == false & checkBoxIdeal.Checked == false & checkBoxAntique.Checked == false)
             {
                 Data.Предпочтения_значение = 15;
             }
             //Ideal mater antique
-            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked)
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 16;
             }
             //Ideal mater middle age
-            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxMiddleAges.Checked)
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxMiddleAges.Checked & checkBoxAntique.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 17;
             }
             //Ideal mater new time
-            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxNewTime.Checked)
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxNewTime.Checked & checkBoxAntique.Checked == false & checkBoxMiddleAges.Checked == false)
             {
                 Data.Предпочтения_значение = 18;
             }
             //ideal antique middle age
-            if (checkBoxIdeal.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked)
+            if (checkBoxIdeal.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxMater.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 19;
             }
             //ideal middle age new time
-            if (checkBoxIdeal.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked)
+            if (checkBoxIdeal.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxMater.Checked == false & checkBoxAntique.Checked == false)
             {
                 Data.Предпочтения_значение = 20;
             }
             //ideal antique new time
-            if (checkBoxIdeal.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked)
+            if (checkBoxIdeal.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked & checkBoxMater.Checked == false & checkBoxMiddleAges.Checked == false)
             {
                 Data.Предпочтения_значение = 21;
             }
             //mater antique middle age
-            if (checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked)
+            if (checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxIdeal.Checked == false & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 22;
             }
             //mater middle age new time
-            if (checkBoxMater.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked)
+            if (checkBoxMater.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxIdeal.Checked == false & checkBoxAntique.Checked == false)
             {
                 Data.Предпочтения_значение = 23;
             }
             //mater antique new time
-            if (checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked)
+            if (checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked & checkBoxIdeal.Checked == false & checkBoxMiddleAges.Checked == false)
             {
                 Data.Предпочтения_значение = 24;
             }
             //ideal mater antique middle age
-            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked)
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked == false)
             {
                 Data.Предпочтения_значение = 25;
             }
             //ideal mater antique new time 
-            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked)
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxAntique.Checked & checkBoxNewTime.Checked & checkBoxMiddleAges.Checked == false)
             {
                 Data.Предпочтения_значение = 26;
             }
             //ideal mater middle ages new time 
-            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked)
+            if (checkBoxIdeal.Checked & checkBoxMater.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxAntique.Checked == false)
             {
                 Data.Предпочтения_значение = 27;
             }
             //3 эпохи + матер
-            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxMater.Checked)
+            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxMater.Checked & checkBoxIdeal.Checked == false)
             {
                 Data.Предпочтения_значение = 28;
             }
             //3 эпохи + Idealizm
-            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxIdeal.Checked & checkBoxIdeal.Checked == false & checkBoxMater.Checked == false)
+            if (checkBoxAntique.Checked & checkBoxMiddleAges.Checked & checkBoxNewTime.Checked & checkBoxIdeal.Checked & checkBoxMater.Checked == false)
             {
                 Data.Предпочтения_значение = 29;
             }
