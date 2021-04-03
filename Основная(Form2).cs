@@ -49,558 +49,336 @@ namespace Filosofiya
         {
             //label1.Font.Size = 200;
         }
+        public void Массив(string line)
+        {
+            if (Data.Выдача_цитат == 0)
+            {
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
+            if (Data.Выдача_цитат == 1)
+            {
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
+            if (Data.Выдача_цитат == 2)
+            {
+                //Последовательный вывод 
+                mas = line.Split('\n');
+                if (p >= mas.Length)
+                {
+                    return;
+                }
+                else
+                {
+                    цитата = mas[p];
+                    Console.WriteLine(цитата);
+                    label1.Text = цитата;
+                }
+            }
+        }
         public void Рандом(string[] mas, string line)
         {
             //Data.Выдача_цитат = 1;
             // считываем Sample.txt
-
-            if (Data.Предпочтения_значение == 1)
+            if (Data.Предпочтения_значение == 1) //Все
             {
-                StreamReader sr = new StreamReader(@".\Resources\Материализм.txt");
-                line = sr.ReadToEnd();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                sr.Close();
-                if (Data.Выдача_цитат == 0)
-                {
-                    Random rand = new Random();
-                    int num = rand.Next(0, mas.Length);
-                    цитата = mas[num];
-                    Console.WriteLine(цитата);
-                    label1.Text = цитата;
-                }
-                if (Data.Выдача_цитат == 1)
-                {
-                    Random rand = new Random();
-                    int num = rand.Next(0, mas.Length);
-                    цитата = mas[num];
-                    Console.WriteLine(цитата);
-                    label1.Text = цитата;
-                }
-                if (Data.Выдача_цитат == 2)
-                {
-                    //
-                    //
-                    //Последовательный вывод (костыль)
-                    if(p >= mas.Length)
-                    {
-                        return;
-                    }
-                    else 
-                    {
-                        цитата = mas[p];
-                        Console.WriteLine(цитата);
-                        label1.Text = цитата;
-                    }
-                    
-                }
-            }
-            if (Data.Предпочтения_значение == 2)
-            {
-                StreamReader sr = new StreamReader(@".\Resources\Идеализм.txt");
-                line = sr.ReadToEnd();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                sr.Close();
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-                ;
-            }
-            if (Data.Предпочтения_значение == 1 ) //Все
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr1.ReadToEnd() + "\n"+ sr2.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
                 sr1.Close();
                 sr2.Close();
                 sr3.Close();
                 sr4.Close();
                 sr5.Close();
                 sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-                
+                Массив(line);
             }
             if (Data.Предпочтения_значение == 2) //Идеализм
             {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
                 line = sr1.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n";
                 sr1.Close();
                 sr3.Close();
                 sr5.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
+                Массив(line);
             }
             if (Data.Предпочтения_значение == 3) //Материализм
             {
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr2.ReadToEnd()+  "\n" + sr4.ReadToEnd()  + "\n" + sr6.ReadToEnd();
-                sr2.Close();
-                sr4.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 4) //Античные челы
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd();
-                sr1.Close();
-                sr2.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 5) //Средние века
-            {
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n";
-                sr3.Close();
-                sr4.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 6) //Новое время
-            {
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
-                sr5.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 7) //Античные идеалисты
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                line = sr1.ReadToEnd();
-                sr1.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-            }
-            if (Data.Предпочтения_значение == 8) //Идеалисты средних веков
-            {
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                line = sr3.ReadToEnd();
-                sr3.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 9) //Идеалисты нового времени
-            {
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                line = sr5.ReadToEnd();
-                sr5.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 10) //Материалисты античности
-            {
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                line = sr2.ReadToEnd();
-                sr2.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 11) //Материалисты Ср.Веков
-            {
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                line = sr4.ReadToEnd();
-                sr4.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 12) //Материалисты нового времени
-            {
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr6.ReadToEnd();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 13) //Античность и ср. века
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr4.ReadToEnd();
-                sr1.Close();
-                sr2.Close();
-                sr3.Close();
-                sr4.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 14) //Античность + новое время
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
-                sr1.Close();
-                sr2.Close();
-                sr5.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 15) //Ср. Века + Новое Время
-            {
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
-                sr3.Close();
-                sr4.Close();
-                sr5.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 16) //Идеалисты материалисты античности
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd();
-                sr1.Close();
-                sr2.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 17) //Идеалисты материалисты Ср.Веков
-            {
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd();
-                sr3.Close();
-                sr4.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 18) //Идеалисты материалисты Нового Времени
-            {
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
-                sr5.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 19) //Идеалисты античности и ср. веков
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                line = sr1.ReadToEnd() + "\n" + sr3.ReadToEnd();
-                sr1.Close();
-                sr3.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 20) //Идеалисты ср. веков и Нового времени
-            {
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                line = sr3.ReadToEnd() + "\n" + sr5.ReadToEnd();
-                sr3.Close();
-                sr5.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 21) //Идеалисты аничности и нового времнеи
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                line = sr1.ReadToEnd() + "\n" + sr5.ReadToEnd();
-                sr1.Close();
-                sr5.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 22) //Материалисты античности и ср. веков
-            {
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                line = sr2.ReadToEnd() + "\n" + sr4.ReadToEnd();
-                sr2.Close();
-                sr4.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 23) //Материалисты ср. веков и нового времени
-            {
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr4.ReadToEnd() +"\n" + sr6.ReadToEnd();
-                sr4.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 24) //Материалисты античности и нового времени
-            {
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr2.ReadToEnd() + "\n" + sr6.ReadToEnd();
-                sr2.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 25) //Идеалисты и материалисты античности и СР.Веков
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr4.ReadToEnd();
-                sr1.Close();
-                sr2.Close();
-                sr3.Close();
-                sr4.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 26) //Идеалисты и материалисты античности и нового времени
-            {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
-                sr1.Close();
-                sr2.Close();
-                sr5.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 27) //Идеалисты и материалисты ср веков и нового времени
-            {
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
-                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
-                sr3.Close();
-                sr4.Close();
-                sr5.Close();
-                sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
-            }
-            if (Data.Предпочтения_значение == 28) //3 Эпохи + материализм
-            {
-                StreamReader sr2 = new StreamReader(@".\Resources\AntiqueMater.txt");
-                StreamReader sr4 = new StreamReader(@".\Resources\MiddleAgesMater.txt");
-                StreamReader sr6 = new StreamReader(@".\Resources\NewTimeMater.txt");
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
                 line = sr2.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n" + sr6.ReadToEnd();
                 sr2.Close();
                 sr4.Close();
                 sr6.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
+                Массив(line);
 
+            }
+            if (Data.Предпочтения_значение == 4) //Античные челы
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd();
+                sr1.Close();
+                sr2.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 5) //Средние века
+            {
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n";
+                sr3.Close();
+                sr4.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 6) //Новое время
+            {
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr5.Close();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 7) //Античные идеалисты
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                line = sr1.ReadToEnd();
+                sr1.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 8) //Идеалисты средних веков
+            {
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                line = sr3.ReadToEnd();
+                sr3.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 9) //Идеалисты нового времени
+            {
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                line = sr5.ReadToEnd();
+                sr5.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 10) //Материалисты античности
+            {
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                line = sr2.ReadToEnd();
+                sr2.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 11) //Материалисты Ср.Веков
+            {
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                line = sr4.ReadToEnd();
+                sr4.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 12) //Материалисты нового времени
+            {
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr6.ReadToEnd();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 13) //Античность и ср. века
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr4.ReadToEnd();
+                sr1.Close();
+                sr2.Close();
+                sr3.Close();
+                sr4.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 14) //Античность + новое время
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr1.Close();
+                sr2.Close();
+                sr5.Close();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 15) //Ср. Века + Новое Время
+            {
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr3.Close();
+                sr4.Close();
+                sr5.Close();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 16) //Идеалисты материалисты античности
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd();
+                sr1.Close();
+                sr2.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 17) //Идеалисты материалисты Ср.Веков
+            {
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd();
+                sr3.Close();
+                sr4.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 18) //Идеалисты материалисты Нового Времени
+            {
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr5.Close();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 19) //Идеалисты античности и ср. веков
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                line = sr1.ReadToEnd() + "\n" + sr3.ReadToEnd();
+                sr1.Close();
+                sr3.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 20) //Идеалисты ср. веков и Нового времени
+            {
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                line = sr3.ReadToEnd() + "\n" + sr5.ReadToEnd();
+                sr3.Close();
+                sr5.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 21) //Идеалисты аничности и нового времнеи
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                line = sr1.ReadToEnd() + "\n" + sr5.ReadToEnd();
+                sr1.Close();
+                sr5.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 22) //Материалисты античности и ср. веков
+            {
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                line = sr2.ReadToEnd() + "\n" + sr4.ReadToEnd();
+                sr2.Close();
+                sr4.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 23) //Материалисты ср. веков и нового времени
+            {
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr4.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr4.Close();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 24) //Материалисты античности и нового времени
+            {
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr2.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr2.Close();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 25) //Идеалисты и материалисты античности и СР.Веков
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr4.ReadToEnd();
+                sr1.Close();
+                sr2.Close();
+                sr3.Close();
+                sr4.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 26) //Идеалисты и материалисты античности и нового времени
+            {
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr1.ReadToEnd() + "\n" + sr2.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr1.Close();
+                sr2.Close();
+                sr5.Close();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 27) //Идеалисты и материалисты ср веков и нового времени
+            {
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr3.Close();
+                sr4.Close();
+                sr5.Close();
+                sr6.Close();
+                Массив(line);
+            }
+            if (Data.Предпочтения_значение == 28) //3 Эпохи + материализм
+            {
+                StreamReader sr2 = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt");
+                StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
+                StreamReader sr6 = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt");
+                line = sr2.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n" + sr6.ReadToEnd();
+                sr2.Close();
+                sr4.Close();
+                sr6.Close();
+                Массив(line);
             }
             if (Data.Предпочтения_значение == 29) //3 Эпохи + Идеализм
             {
-                StreamReader sr1 = new StreamReader(@".\Resources\AntiqueIdeal.txt");
-                StreamReader sr3 = new StreamReader(@".\Resources\MiddleAgesIdeal.txt");
-                StreamReader sr5 = new StreamReader(@".\Resources\NewTimeIdeal.txt");
+                StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
+                StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
+                StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
                 line = sr1.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n";
                 sr1.Close();
                 sr3.Close();
                 sr5.Close();
-                // невьебенный рандом
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-
+                Массив(line);
             }
-
         }
         public void Автор()
         {
@@ -623,17 +401,21 @@ namespace Filosofiya
                     if (response.ContentLength == 0 && response.StatusCode == HttpStatusCode.NoContent)
                     {
                         MessageBox.Show("Почему-то не удается загрузить цитаты...\n" + "Пытаюсь исправить");
+                        //AntiqueIdeal
                         WebClient wc = new WebClient();
                         string url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
                         string save_path = @".\Resources\";
                         string name = "Идеализм.txt";
                         wc.DownloadFile(url, save_path + name);
+                        //AntiqueMater
                         WebClient wc2 = new WebClient();
                         url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
                         string save_path2 = @".\Resources\";
                         string name2 = "Материализм.txt";
                         wc2.DownloadFile(url, save_path2 + name2);
                         MessageBox.Show("Файлы восстановлены:" + name + name2);
+                        //
+
                     }
                 }
                 
@@ -644,10 +426,10 @@ namespace Filosofiya
             Браузер_Form3_ f3 = new Браузер_Form3_();
             f3.Show();
         }
-        string Ницще = @".\Resources\ницше.jpg";
-        string Декарт = @".\Resources\декарт.jpg";
-        string Лейбниц = @".\Resources\лейбниц.jpg";
-        string Test = @".\Resources\1.jpg";
+        string Ницще = @".\Resources\img\ницше.jpg";
+        string Декарт = @".\Resources\img\декарт.jpg";
+        string Лейбниц = @".\Resources\img\лейбниц.jpg";
+        string Test = @".\Resources\img\test.jpg";
         public void Получение_изображение_об_авторе()
         {
             
@@ -716,7 +498,10 @@ namespace Filosofiya
         private void button1_Click(object sender, EventArgs e)
         {
             Все_в_месте();
-            p++;
+            if (Data.Выдача_цитат == 2)
+            { 
+                p++; 
+            }
         }
 
         private void label1_TextChanged(object sender, EventArgs e)
@@ -760,6 +545,9 @@ namespace Filosofiya
                 materialskin.Theme = MaterialSkinManager.Themes.DARK;
                 this.Controls["label1"].BackColor = Color.FromName("Gray");
                 this.Controls["linkLabel1"].BackColor = Color.FromName("Gray");
+                this.Controls["menuStrip1"].BackColor = Color.FromName("Gray");
+                this.Controls["button1"].BackColor = Color.FromName("Gray");
+                this.Controls["button1"].ForeColor = Color.FromName("ControlDark");
 
             }
             else if (toolStripComboBox2.SelectedIndex == 1)
@@ -768,6 +556,9 @@ namespace Filosofiya
                 materialskin.Theme = MaterialSkinManager.Themes.LIGHT;
                 this.Controls["label1"].BackColor = Color.FromName("White");
                 this.Controls["linkLabel1"].BackColor = Color.FromName("White");
+                this.Controls["menuStrip1"].BackColor = Color.FromName("White");
+                this.Controls["button1"].BackColor = Color.FromName("Control");
+                this.Controls["button1"].ForeColor = Color.FromName("ControlText");
             }
         }
 
@@ -877,6 +668,11 @@ namespace Filosofiya
             Data.Вкладка = 2;
             Настройки form4 = new Настройки(this.d);
             form4.Show();
+        }
+
+        private void toolStripComboBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
