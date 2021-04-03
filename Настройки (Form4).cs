@@ -19,138 +19,53 @@ namespace Filosofiya
 {
     public partial class Настройки : MaterialForm
     {
+        
+
         public void Считываем()
         {
-//AntiqueIdeal
-//AntiqueMater
-//MiddleAgesIdeal
-//MiddleAgesMater
-//NewTimeIdeal
-//NewTimeMater
-            try
+            if (comboBox2.SelectedIndex == -1)
             {
-                if (comboBox2.SelectedIndex == -1)
+                label2.Text = "Воспользуйтесь выпадающим списком! (combobox)";
+            }
+            if (comboBox2.SelectedIndex == 0) //Материализм
+            {
+                label2.Hide();
+                using (StreamReader myReader = new StreamReader(@".\Resources\Материализм.txt", Encoding.UTF8))
                 {
-                    label2.Text = "Воспользуйтесь выпадающим списком! (combobox)";
-                }
-                if (comboBox2.SelectedIndex == 0) //Материализм
-                {
-                    label2.Hide();
-                    using (StreamReader myReader = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt", Encoding.UTF8))
-                    {
-                        richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
-                    }
-                }
-                if (comboBox2.SelectedIndex == 1) //Идеализм
-                {
-                    label2.Hide();
-                    using (StreamReader myReader = new StreamReader(@".\Resources\цитаты\AntiqueMater.txt", Encoding.UTF8))
-                    {
-                        richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
-                    }
-                }
-                if (comboBox2.SelectedIndex == 2) //Идеализм
-                {
-                    label2.Hide();
-                    using (StreamReader myReader = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt", Encoding.UTF8))
-                    {
-                        richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
-                    }
-                }
-                if (comboBox2.SelectedIndex == 3) //Идеализм
-                {
-                    label2.Hide();
-                    using (StreamReader myReader = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt", Encoding.UTF8))
-                    {
-                        richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
-                    }
-                }
-                if (comboBox2.SelectedIndex == 4) //Идеализм
-                {
-                    label2.Hide();
-                    using (StreamReader myReader = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt", Encoding.UTF8))
-                    {
-                        richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
-                    }
-                }
-                if (comboBox2.SelectedIndex == 5) //Идеализм
-                {
-                    label2.Hide();
-                    using (StreamReader myReader = new StreamReader(@".\Resources\цитаты\NewTimeMater.txt", Encoding.UTF8))
-                    {
-                        richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
-                    }
+                    richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
                 }
             }
-            catch
+            if (comboBox2.SelectedIndex == 1) //Идеализм
             {
-                MessageBox.Show("Что-то случилось");
+                label2.Hide();
+                using (StreamReader myReader = new StreamReader(@".\Resources\Идеализм.txt", Encoding.UTF8))
+                {
+                    richTextBox1.Text = myReader.ReadToEnd() /*+ "\r\n"*/;
+                }
             }
+            
         }
         public void Запись()
         {
+            if (comboBox2.SelectedIndex == 0)
+            {
+                using (StreamWriter myWriter = new StreamWriter(@".\Resources\Материализм.txt"))
+                {
+                    string line = richTextBox1.Text;
+                    myWriter.Write(line);
+                    label2.Text = "Записал!";
+                }
+            }
+            if (comboBox2.SelectedIndex == 1)
+            {
+                using (StreamWriter myWriter = new StreamWriter(@".\Resources\Идеализм.txt"))
+                {
+                    string line = richTextBox1.Text;
+                    myWriter.Write(line);
+                    label2.Text = "Записал!";
+                }
+            }
             
-            try
-            {
-                if (comboBox2.SelectedIndex == 0)
-                {
-                    using (StreamWriter myWriter = new StreamWriter(@".\Resources\цитаты\AntiqueIdeal.txt"))
-                    {
-                        string line = richTextBox1.Text;
-                        myWriter.Write(line);
-                        label2.Text = "Записал!";
-                    }
-                }
-                if (comboBox2.SelectedIndex == 1)
-                {
-                    using (StreamWriter myWriter = new StreamWriter(@".\Resources\цитаты\AntiqueMater.txt"))
-                    {
-                        string line = richTextBox1.Text;
-                        myWriter.Write(line);
-                        label2.Text = "Записал!";
-                    }
-                }
-                if (comboBox2.SelectedIndex == 2)
-                {
-                    using (StreamWriter myWriter = new StreamWriter(@".\Resources\цитаты\MiddleAgesIdeal.txt"))
-                    {
-                        string line = richTextBox1.Text;
-                        myWriter.Write(line);
-                        label2.Text = "Записал!";
-                    }
-                }
-                if (comboBox2.SelectedIndex == 3)
-                {
-                    using (StreamWriter myWriter = new StreamWriter(@".\Resources\цитаты\MiddleAgesMater.txt"))
-                    {
-                        string line = richTextBox1.Text;
-                        myWriter.Write(line);
-                        label2.Text = "Записал!";
-                    }
-                }
-                if (comboBox2.SelectedIndex == 4)
-                {
-                    using (StreamWriter myWriter = new StreamWriter(@".\Resources\цитаты\NewTimeIdeal.txt"))
-                    {
-                        string line = richTextBox1.Text;
-                        myWriter.Write(line);
-                        label2.Text = "Записал!";
-                    }
-                }
-                if (comboBox2.SelectedIndex == 5)
-                {
-                    using (StreamWriter myWriter = new StreamWriter(@".\Resources\цитаты\NewTimeMater.txt"))
-                    {
-                        string line = richTextBox1.Text;
-                        myWriter.Write(line);
-                        label2.Text = "Записал!";
-                    }
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Что-то случилось");
-            }
         }
         int data;
         public Настройки(int data)
@@ -284,6 +199,7 @@ namespace Filosofiya
                     progressBar1.Value = 3;
                     using (var response = (HttpWebResponse)request.GetResponse())
                     {
+
                         if (response.ContentLength == 0 && response.StatusCode == HttpStatusCode.NoContent)
                         {
 
