@@ -47,13 +47,13 @@ namespace Filosofiya
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -147,8 +147,12 @@ namespace Filosofiya
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Материализм",
-            "Идеализм"});
+            "AntiqueIdeal",
+            "AntiqueMater",
+            "MiddleAgesIdeal",
+            "MiddleAgesMater",
+            "NewTimeIdeal",
+            "NewTimeMater"});
             this.comboBox2.Location = new System.Drawing.Point(201, 212);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
@@ -257,6 +261,26 @@ namespace Filosofiya
             this.tabPage4.Text = "Обновление цитат";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(333, 267);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 21);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Загрузить";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(295, 175);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(149, 22);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Обновить ссылки";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(295, 241);
@@ -269,8 +293,12 @@ namespace Filosofiya
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Items.AddRange(new object[] {
-            "Материализм",
-            "Идеализм"});
+            "AntiqueIdeal",
+            "AntiqueMater",
+            "MiddleAgesIdeal",
+            "MiddleAgesMater",
+            "NewTimeIdeal",
+            "NewTimeMater"});
             this.listBox1.Location = new System.Drawing.Point(295, 55);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(149, 56);
@@ -303,26 +331,6 @@ namespace Filosofiya
             this.button5.Text = "Обновить";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(295, 175);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(149, 22);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Обновить ссылки";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(333, 267);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(69, 21);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Загрузить";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Настройки
             // 
