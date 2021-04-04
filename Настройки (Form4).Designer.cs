@@ -263,7 +263,7 @@ namespace Filosofiya
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(333, 267);
+            this.button7.Location = new System.Drawing.Point(333, 244);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(69, 21);
             this.button7.TabIndex = 7;
@@ -283,7 +283,7 @@ namespace Filosofiya
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(295, 241);
+            this.textBox2.Location = new System.Drawing.Point(295, 218);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(149, 20);
             this.textBox2.TabIndex = 5;
@@ -299,9 +299,9 @@ namespace Filosofiya
             "MiddleAgesMater",
             "NewTimeIdeal",
             "NewTimeMater"});
-            this.listBox1.Location = new System.Drawing.Point(295, 55);
+            this.listBox1.Location = new System.Drawing.Point(295, 29);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(149, 56);
+            this.listBox1.Size = new System.Drawing.Size(149, 82);
             this.listBox1.TabIndex = 4;
             // 
             // progressBar1
@@ -316,7 +316,7 @@ namespace Filosofiya
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(292, 34);
+            this.label4.Location = new System.Drawing.Point(292, 3);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 17);
             this.label4.TabIndex = 2;

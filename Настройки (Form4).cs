@@ -164,11 +164,11 @@ namespace Filosofiya
         {
             textBox2.Hide();
             button7.Hide();
-            if (data == 4)
+            if (data == 4 || Data.Вкладка == 3 )
             {
                 tabControl1.SelectedIndex = 0;
             }
-            if (data == 2)
+            if (data == 2 || Data.Вкладка == 4)
             {
                 tabControl1.SelectedIndex = 1;
             }
@@ -294,38 +294,115 @@ namespace Filosofiya
                                 label4.Text = "Происходит обновление цитаты..";
                                 Thread.Sleep(1500);
                                 WebClient wc = new WebClient();
-
+                                //AntiqueIdea
                                 if (listBox1.SelectedIndex == 0)
                                 {
                                     if (button_1 == 0)
                                     {
-                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
+                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/AntiqueIdeal.txt";
                                     }
                                     else if (button_1 == 1)
                                     {
                                         url = url2;
                                         button_1 = button_1 - 1;
                                     }
-                                    string save_path = @".\Resources\";
-                                    string name = "Материализм.txt";
+                                    string save_path = @".\Resources\цитаты\";
+                                    string name = "AntiqueIdea.txt";
                                     wc.DownloadFile(url, save_path + name);
                                     progressBar1.Value = 20;
                                     label4.Text = "Успешно обновлено";
                                     MessageBox.Show("Успешно обновлено:" + name);
                                 }
+                                //AntiqueMater
                                 if (listBox1.SelectedIndex == 1)
                                 {
                                     if (button_1 == 0)
                                     {
-                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
+                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/AntiqueMater.txt";
                                     }
                                     else if (button_1 == 1)
                                     {
                                         url = url2;
                                         button_1 = button_1 - 1;
                                     }
-                                    string save_path = @".\Resources\";
-                                    string name = "Идеализм.txt";
+                                    string save_path = @".\Resources\цитаты\";
+                                    string name = "AntiqueMater.txt";
+                                    wc.DownloadFile(url, save_path + name);
+                                    progressBar1.Value = 20;
+                                    label4.Text = "Успешно обновлено";
+                                    MessageBox.Show("Успешно обновлено:" + name);
+                                }
+                                //MiddleAgesIdeal
+                                if (listBox1.SelectedIndex == 2)
+                                {
+                                    if (button_1 == 0)
+                                    {
+                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/MiddleAgesIdeal.txt";
+                                    }
+                                    else if (button_1 == 1)
+                                    {
+                                        url = url2;
+                                        button_1 = button_1 - 1;
+                                    }
+                                    string save_path = @".\Resources\цитаты\";
+                                    string name = "MiddleAgesIdeal.txt";
+                                    wc.DownloadFile(url, save_path + name);
+                                    progressBar1.Value = 20;
+                                    label4.Text = "Успешно обновлено";
+                                    MessageBox.Show("Успешно обновлено:" + name);
+                                }
+                                //MiddleAgesMater
+                                if (listBox1.SelectedIndex == 3)
+                                {
+                                    if (button_1 == 0)
+                                    {
+                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/MiddleAgesMater.txt";
+                                    }
+                                    else if (button_1 == 1)
+                                    {
+                                        url = url2;
+                                        button_1 = button_1 - 1;
+                                    }
+                                    string save_path = @".\Resources\цитаты\";
+                                    string name = "MiddleAgesMater.txt";
+                                    wc.DownloadFile(url, save_path + name);
+                                    progressBar1.Value = 20;
+                                    label4.Text = "Успешно обновлено";
+                                    MessageBox.Show("Успешно обновлено:" + name);
+                                }
+                                //NewTimeIdeal
+                                if (listBox1.SelectedIndex == 4)
+                                {
+                                    if (button_1 == 0)
+                                    {
+                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/NewTimeIdeal.txt";
+                                    }
+                                    else if (button_1 == 1)
+                                    {
+                                        url = url2;
+                                        button_1 = button_1 - 1;
+                                    }
+                                    string save_path = @".\Resources\цитаты\";
+                                    string name = "NewTimeIdeal.txt";
+                                    wc.DownloadFile(url, save_path + name);
+                                    progressBar1.Value = 20;
+                                    label4.Text = "Успешно обновлено";
+                                    MessageBox.Show("Успешно обновлено:" + name);
+                                }
+                                //NewTimeMater
+                                if (listBox1.SelectedIndex == 5)
+                                {
+                                    if (button_1 == 0)
+                                    {
+                                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/NewTimeMater.txt";
+                                    }
+                                    else if (button_1 == 1)
+                                    {
+                                        url = url2;
+                                        button_1 = button_1 - 1;
+                                    }
+                                    string save_path = @".\Resources\цитаты\";
+                                    string name = "NewTimeMater.txt";
                                     wc.DownloadFile(url, save_path + name);
                                     progressBar1.Value = 20;
                                     label4.Text = "Успешно обновлено";

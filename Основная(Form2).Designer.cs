@@ -31,7 +31,6 @@ namespace Filosofiya
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -55,6 +54,7 @@ namespace Filosofiya
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.button1 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,17 +70,6 @@ namespace Filosofiya
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(201, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
@@ -275,15 +264,28 @@ namespace Filosofiya
             this.timer2.Interval = 60000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // button1
+            // 
+            this.button1.Depth = 0;
+            this.button1.Location = new System.Drawing.Point(202, 200);
+            this.button1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.button1.Name = "button1";
+            this.button1.Primary = true;
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Ok";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            // 
             // основное1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 321);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -302,7 +304,6 @@ namespace Filosofiya
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -326,5 +327,6 @@ namespace Filosofiya
         private System.Windows.Forms.ToolStripMenuItem настройкиШрифтаЦитатыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выводЦитатыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обновлениеЦитатыToolStripMenuItem;
+        private MaterialSkin.Controls.MaterialRaisedButton button1;
     }
 }

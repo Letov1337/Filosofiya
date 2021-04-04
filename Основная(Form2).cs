@@ -403,18 +403,41 @@ namespace Filosofiya
                         MessageBox.Show("Почему-то не удается загрузить цитаты...\n" + "Пытаюсь исправить");
                         //AntiqueIdeal
                         WebClient wc = new WebClient();
-                        string url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%98%D0%B4%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
-                        string save_path = @".\Resources\";
-                        string name = "Идеализм.txt";
+                        string url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/AntiqueIdeal.txt";
+                        string save_path = @".\Resources\цитаты\";
+                        string name = "AntiqueIdeal.txt";
                         wc.DownloadFile(url, save_path + name);
                         //AntiqueMater
                         WebClient wc2 = new WebClient();
-                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%BC.txt";
-                        string save_path2 = @".\Resources\";
-                        string name2 = "Материализм.txt";
+                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/AntiqueMater.txt";
+                        string save_path2 = @".\Resources\цитаты\";
+                        string name2 = "AntiqueMater.txt";
                         wc2.DownloadFile(url, save_path2 + name2);
-                        MessageBox.Show("Файлы восстановлены:" + name + name2);
-                        //
+                        //MiddleAgesIdeal
+                        WebClient wc3 = new WebClient();
+                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/MiddleAgesIdeal.txt";
+                        string save_path3 = @".\Resources\цитаты\";
+                        string name3 = "MiddleAgesIdealм.txt";
+                        wc3.DownloadFile(url, save_path3 + name3);
+                        //MiddleAgesMater
+                        WebClient wc4 = new WebClient();
+                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/MiddleAgesMater.txt";
+                        string save_path4 = @".\Resources\цитаты\";
+                        string name4 = "MiddleAgesMater.txt";
+                        wc3.DownloadFile(url, save_path4 + name4);
+                        //NewTimeIdeal
+                        WebClient wc5 = new WebClient();
+                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/NewTimeIdeal.txt";
+                        string save_path5 = @".\Resources\цитаты\";
+                        string name5 = "NewTimeIdeal.txt";
+                        wc3.DownloadFile(url, save_path5 + name5);
+                        //NewTimeMater
+                        WebClient wc6 = new WebClient();
+                        url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/NewTimeMater.txt";
+                        string save_path6 = @".\Resources\цитаты\";
+                        string name6 = "NewTimeMater.txt";
+                        wc3.DownloadFile(url, save_path6 + name6);
+                        MessageBox.Show("Файлы восстановлены:" + name + " " + name2 + " " + name3 + " " + name4 + " " + name5 + " " + name6);
 
                     }
                 }
@@ -627,13 +650,15 @@ namespace Filosofiya
         int d = 1;
         public void записатьЦитатуToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Data.Вкладка = 3;
             Настройки form4 = new Настройки(this.a);
             form4.ShowDialog();
         }
 
         private void таймерToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Настройки form4 = new Настройки(this.b);
+            Data.Вкладка = 4;
+            Настройки form4 = new Настройки(this.b);
             form4.Show();
         }
 
@@ -673,6 +698,15 @@ namespace Filosofiya
         private void toolStripComboBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            Все_в_месте();
+            if (Data.Выдача_цитат == 2)
+            {
+                p++;
+            }
         }
     }
 }
