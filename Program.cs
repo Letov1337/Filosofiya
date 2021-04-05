@@ -12,6 +12,7 @@ namespace Filosofiya
         public static int Предпочтения_значение { get; set; }
         public static int Вкладка { get; set; }
         public static int Выдача_цитат { get; set; }
+        public static int Узнать_про_цитату_и_автора { get; set; }
     }
     static class Program
     {

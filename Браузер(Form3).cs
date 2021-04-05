@@ -15,9 +15,18 @@ namespace Filosofiya
        
         public Браузер_Form3_()
         {
-            InitializeComponent();
-            Uri url = new Uri("https://yandex.ru/images/search?text=" + основное1.автор);
-            webControl1.Source = url;
+            if (основное1.автор != null && Data.Узнать_про_цитату_и_автора == 1)
+            {
+                InitializeComponent();
+                Uri url = new Uri("https://yandex.ru/images/search?text=" + основное1.автор);
+                webControl1.Source = url;
+            }
+            if(основное1.цитата != null && Data.Узнать_про_цитату_и_автора == 2)
+            {
+                InitializeComponent();
+                Uri url = new Uri("https://yandex.ru/search/?text=" + основное1.цитата);
+                webControl1.Source = url;
+            }
         }
 
 

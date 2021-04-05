@@ -27,7 +27,7 @@ namespace Filosofiya
         private PopupNotifier popup = null;
         string line; // line = mas
         string[] mas; // массив-вывод
-        string цитата; // основной вывод 
+        public static string цитата; // основной вывод 
         public static string автор;
         int p;
         private NotifyIcon NI = new NotifyIcon(); // уведомления 2 
@@ -384,7 +384,7 @@ namespace Filosofiya
         {
             try
             {
-                string test = this.цитата;
+                string test = цитата;
                 string te = test.Substring(test.LastIndexOf("(") + 1);
                 автор = te.Substring(0, te.LastIndexOf(")"));
                 linkLabel1.Text = автор;
@@ -446,8 +446,29 @@ namespace Filosofiya
         }
         public void Узнать_об_авторе()
         {
-            Браузер_Form3_ f3 = new Браузер_Form3_();
-            f3.Show();
+            if (автор != null)
+            {
+                Data.Узнать_про_цитату_и_автора = 1;
+                Браузер_Form3_ f3 = new Браузер_Form3_();
+                f3.Show();
+            }
+            else
+            {
+                MessageBox.Show("Нужно узнать автора!");
+            }
+        }
+        public void Узнать_про_цитату()
+        {
+            if (цитата != null)
+            {
+                Data.Узнать_про_цитату_и_автора = 2;
+                Браузер_Form3_ f3 = new Браузер_Form3_();
+                f3.Show();
+            }
+            else
+            {
+                MessageBox.Show("Нужно вывести цитату!");
+            }
         }
         string Ницще = @".\Resources\img\ницше.jpg";
         string Декарт = @".\Resources\img\декарт.jpg";
@@ -707,6 +728,11 @@ namespace Filosofiya
             {
                 p++;
             }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            Узнать_про_цитату();
         }
     }
 }

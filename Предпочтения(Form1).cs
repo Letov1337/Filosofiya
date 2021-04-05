@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,9 @@ namespace Filosofiya
         public Предпочтения()
         {
             InitializeComponent();
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             
         }
 
@@ -32,6 +36,26 @@ namespace Filosofiya
         private void button1_Click_1(object sender, EventArgs e)
         {
             
+            
+        }
+
+        private void Предпочтения_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Предпочтения_Validating(object sender, CancelEventArgs e)
+        {
+           
+        }
+
+        private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
             //все 5 / идеал матер / 3 эпохи
             if (checkBoxIdeal.Checked == true & checkBoxMater.Checked == true & checkBoxAntique.Checked == true & checkBoxMiddleAges.Checked == true & checkBoxNewTime.Checked == true | checkBoxIdeal.Checked == true & checkBoxMater.Checked == true & checkBoxAntique.Checked == false & checkBoxMiddleAges.Checked == false & checkBoxNewTime.Checked == false | checkBoxAntique.Checked == true & checkBoxMiddleAges.Checked == true & checkBoxNewTime.Checked == true & checkBoxIdeal.Checked == false & checkBoxMater.Checked == false)
             {
@@ -181,16 +205,6 @@ namespace Filosofiya
             this.Hide();
             f2.Show();
             MessageBox.Show(Data.Предпочтения_значение.ToString());
-        }
-
-        private void Предпочтения_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Предпочтения_Validating(object sender, CancelEventArgs e)
-        {
-           
         }
     }
 }

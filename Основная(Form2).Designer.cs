@@ -70,6 +70,7 @@ namespace Filosofiya
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // linkLabel1
             // 
