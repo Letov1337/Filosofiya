@@ -734,6 +734,12 @@ namespace Filosofiya
         {
             Узнать_про_цитату();
         }
+
+        private void предпочтенияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Предпочтения form1 = new Предпочтения();
+            form1.Show();
+        }
     }
 }
 

@@ -55,6 +55,7 @@ namespace Filosofiya
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.button1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.предпочтенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +101,7 @@ namespace Filosofiya
             this.настройкиToolStripMenuItem,
             this.темаToolStripMenuItem,
             this.настройкиШрифтаToolStripMenuItem,
+            this.предпочтенияToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -278,6 +280,13 @@ namespace Filosofiya
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
+            // предпочтенияToolStripMenuItem
+            // 
+            this.предпочтенияToolStripMenuItem.Name = "предпочтенияToolStripMenuItem";
+            this.предпочтенияToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.предпочтенияToolStripMenuItem.Text = "Предпочтения";
+            this.предпочтенияToolStripMenuItem.Click += new System.EventHandler(this.предпочтенияToolStripMenuItem_Click);
+            // 
             // основное1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,5 +338,6 @@ namespace Filosofiya
         private System.Windows.Forms.ToolStripMenuItem выводЦитатыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обновлениеЦитатыToolStripMenuItem;
         private MaterialSkin.Controls.MaterialRaisedButton button1;
+        private System.Windows.Forms.ToolStripMenuItem предпочтенияToolStripMenuItem;
     }
 }
