@@ -142,7 +142,7 @@ namespace Filosofiya
             {
                 StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
                 StreamReader sr4 = new StreamReader(@".\Resources\цитаты\MiddleAgesMater.txt");
-                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd() + "\n";
+                line = sr3.ReadToEnd() + "\n" + sr4.ReadToEnd();
                 sr3.Close();
                 sr4.Close();
                 Массив(line);
@@ -373,7 +373,7 @@ namespace Filosofiya
                 StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
                 StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
                 StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
-                line = sr1.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n";
+                line = sr1.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr5.ReadToEnd();
                 sr1.Close();
                 sr3.Close();
                 sr5.Close();
