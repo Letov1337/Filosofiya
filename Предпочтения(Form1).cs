@@ -223,6 +223,8 @@ namespace Filosofiya
             }
             основное1 f2 = new основное1();
             this.Hide();
+            Предпочтения f1 = new Предпочтения();
+            f1.Close();
             f2.Show();
             MessageBox.Show(Data.Предпочтения_значение.ToString());
         }
