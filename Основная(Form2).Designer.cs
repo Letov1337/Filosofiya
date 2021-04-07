@@ -69,6 +69,7 @@ namespace Filosofiya
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(515, 56);
             this.label1.TabIndex = 0;
+            this.label1.Text = "Цитата:";
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
