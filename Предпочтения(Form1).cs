@@ -9,11 +9,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace Filosofiya
 {
     public partial class Предпочтения : MaterialForm
     {
+        private void Автозапуск()
+        {
+            const string applicationName = "Quote Generator";
+            const string pathRegistryKeyStartup =
+                        "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
+
+            using (RegistryKey registryKeyStartup =
+                        Registry.CurrentUser.OpenSubKey(pathRegistryKeyStartup, true))
+            {
+                registryKeyStartup.SetValue(
+                    applicationName,
+                    string.Format("\"{0}\"", System.Reflection.Assembly.GetExecutingAssembly().Location));
+            }
+        }
         public Предпочтения()
         {
             InitializeComponent();
@@ -46,6 +61,7 @@ namespace Filosofiya
             checkBoxMiddleAges.Checked = Properties.Settings.Default.checkBoxMiddleAges;
             checkBoxNewTime.Checked = Properties.Settings.Default.checkBoxNewTime;
             checkBoxAntique.Checked = Properties.Settings.Default.checkBoxAntique;
+            Автозапуск();
         }
 
         private void Предпочтения_Validating(object sender, CancelEventArgs e)
