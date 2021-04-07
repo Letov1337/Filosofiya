@@ -67,7 +67,7 @@ namespace Filosofiya
             // 
             this.checkBoxIdeal.AutoSize = true;
             this.checkBoxIdeal.Depth = 0;
-            this.checkBoxIdeal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxIdeal.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBoxIdeal.Location = new System.Drawing.Point(14, 89);
             this.checkBoxIdeal.Margin = new System.Windows.Forms.Padding(0);
             this.checkBoxIdeal.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -83,7 +83,7 @@ namespace Filosofiya
             // 
             this.checkBoxMater.AutoSize = true;
             this.checkBoxMater.Depth = 0;
-            this.checkBoxMater.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.checkBoxMater.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBoxMater.Location = new System.Drawing.Point(14, 119);
             this.checkBoxMater.Margin = new System.Windows.Forms.Padding(0);
             this.checkBoxMater.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -99,7 +99,7 @@ namespace Filosofiya
             // 
             this.checkBoxAntique.AutoSize = true;
             this.checkBoxAntique.Depth = 0;
-            this.checkBoxAntique.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.checkBoxAntique.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBoxAntique.Location = new System.Drawing.Point(250, 89);
             this.checkBoxAntique.Margin = new System.Windows.Forms.Padding(0);
             this.checkBoxAntique.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -115,7 +115,7 @@ namespace Filosofiya
             // 
             this.checkBoxMiddleAges.AutoSize = true;
             this.checkBoxMiddleAges.Depth = 0;
-            this.checkBoxMiddleAges.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.checkBoxMiddleAges.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBoxMiddleAges.Location = new System.Drawing.Point(250, 119);
             this.checkBoxMiddleAges.Margin = new System.Windows.Forms.Padding(0);
             this.checkBoxMiddleAges.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -131,7 +131,7 @@ namespace Filosofiya
             // 
             this.checkBoxNewTime.AutoSize = true;
             this.checkBoxNewTime.Depth = 0;
-            this.checkBoxNewTime.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.checkBoxNewTime.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBoxNewTime.Location = new System.Drawing.Point(250, 149);
             this.checkBoxNewTime.Margin = new System.Windows.Forms.Padding(0);
             this.checkBoxNewTime.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -177,6 +177,7 @@ namespace Filosofiya
             this.Name = "Предпочтения";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выберите предпочтения:";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Предпочтения_FormClosed);
             this.Load += new System.EventHandler(this.Предпочтения_Load);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.Предпочтения_Validating);
             this.ResumeLayout(false);

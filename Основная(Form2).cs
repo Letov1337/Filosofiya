@@ -60,30 +60,30 @@ namespace Filosofiya
                 Console.WriteLine(цитата);
                 label1.Text = цитата;
             }
-            if (Data.Выдача_цитат == 1)
-            {
-                mas = line.Split('\n');
-                Random rand = new Random();
-                int num = rand.Next(0, mas.Length);
-                цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
-            }
-            if (Data.Выдача_цитат == 2)
-            {
-                //Последовательный вывод 
-                mas = line.Split('\n');
-                if (p >= mas.Length)
-                {
-                    return;
-                }
-                else
-                {
-                    цитата = mas[p];
-                    Console.WriteLine(цитата);
-                    label1.Text = цитата;
-                }
-            }
+            //if (Data.Выдача_цитат == 1)
+            //{
+            //    mas = line.Split('\n');
+            //    Random rand = new Random();
+            //    int num = rand.Next(0, mas.Length);
+            //    цитата = mas[num];
+            //    Console.WriteLine(цитата);
+            //    label1.Text = цитата;
+            //}
+            //if (Data.Выдача_цитат == 2)
+            //{
+            //    //Последовательный вывод 
+            //    mas = line.Split('\n');
+            //    if (p >= mas.Length)
+            //    {
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        цитата = mas[p];
+            //        Console.WriteLine(цитата);
+            //        label1.Text = цитата;
+            //    }
+            //}
         }
         public void Рандом(string[] mas, string line)
         {
@@ -111,7 +111,7 @@ namespace Filosofiya
                 StreamReader sr1 = new StreamReader(@".\Resources\цитаты\AntiqueIdeal.txt");
                 StreamReader sr3 = new StreamReader(@".\Resources\цитаты\MiddleAgesIdeal.txt");
                 StreamReader sr5 = new StreamReader(@".\Resources\цитаты\NewTimeIdeal.txt");
-                line = sr1.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr5.ReadToEnd() + "\n";
+                line = sr1.ReadToEnd() + "\n" + sr3.ReadToEnd() + "\n" + sr5.ReadToEnd();
                 sr1.Close();
                 sr3.Close();
                 sr5.Close();
@@ -417,7 +417,7 @@ namespace Filosofiya
                         WebClient wc3 = new WebClient();
                         url = "https://raw.githubusercontent.com/Letov1337/Filosofiya/master/Resources/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B/MiddleAgesIdeal.txt";
                         string save_path3 = @".\Resources\цитаты\";
-                        string name3 = "MiddleAgesIdealм.txt";
+                        string name3 = "MiddleAgesIdeal.txt";
                         wc3.DownloadFile(url, save_path3 + name3);
                         //MiddleAgesMater
                         WebClient wc4 = new WebClient();
