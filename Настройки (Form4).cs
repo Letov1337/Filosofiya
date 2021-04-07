@@ -15,6 +15,7 @@ using System.Net.Sockets;
 using System.Net.NetworkInformation;
 using System.Net.Http;
 using System.Threading;
+using Microsoft.Win32;
 namespace Filosofiya
 {
     public partial class Настройки : MaterialForm
@@ -179,6 +180,10 @@ namespace Filosofiya
             if (Data.Вкладка == 2)
             {
                 tabControl1.SelectedIndex = 3;
+            }
+            if (Data.Вкладка == 10)
+            {
+                tabControl1.SelectedIndex = 4;
             }
         }
 
@@ -492,6 +497,42 @@ namespace Filosofiya
                 button_2 = button_2 - 1;
                 textBox2.Hide();
                 button7.Hide();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (comboBox4.SelectedIndex == -1)
+            {
+                MessageBox.Show("Нужно что-то выбрать");
+            }
+            if (comboBox4.SelectedIndex == 0)
+            {
+                    const string applicationName = "Quote Generator";
+                    const string pathRegistryKeyStartup =
+                                "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
+
+                    using (RegistryKey registryKeyStartup =
+                                Registry.CurrentUser.OpenSubKey(pathRegistryKeyStartup, true))
+                    {
+                        registryKeyStartup.DeleteValue(applicationName, false);
+                    }
+                    MessageBox.Show("Автозагрузка выключена!");
+            }
+            if (comboBox4.SelectedIndex == 1)
+            {
+                const string applicationName = "Quote Generator";
+                const string pathRegistryKeyStartup =
+                            "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
+
+                using (RegistryKey registryKeyStartup =
+                            Registry.CurrentUser.OpenSubKey(pathRegistryKeyStartup, true))
+                {
+                    registryKeyStartup.SetValue(
+                        applicationName,
+                        string.Format("\"{0}\"", System.Reflection.Assembly.GetExecutingAssembly().Location));
+                }
+                MessageBox.Show("Автозагрузка включена!");
             }
         }
     }

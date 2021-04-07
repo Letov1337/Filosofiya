@@ -568,10 +568,10 @@ namespace Filosofiya
         public void Notifier()
         {
             Рандом(mas, line);
-            NI.BalloonTipText = "Цитата:";
-            NI.BalloonTipTitle = цитата;
+            NI.BalloonTipText = цитата;
+            NI.BalloonTipTitle = "";
             NI.BalloonTipIcon = ToolTipIcon.None;
-            NI.Icon = new Icon(@".\Resources\povezlo.ico");
+            NI.Icon = new Icon(@".\philosophy.ico");
             NI.Visible = true;
             NI.ShowBalloonTip(1000);
         }
@@ -739,6 +739,13 @@ namespace Filosofiya
         {
             Предпочтения form1 = new Предпочтения();
             form1.Show();
+        }
+
+        private void автозагрузкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Data.Вкладка = 10;
+            Настройки form4 = new Настройки(this.d);
+            form4.Show();
         }
     }
 }

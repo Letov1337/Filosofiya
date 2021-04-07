@@ -49,13 +49,14 @@ namespace Filosofiya
             this.настройкиШрифтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиШрифтаЧасовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиШрифтаЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.предпочтенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.button1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.предпочтенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.автозагрузкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -117,7 +118,8 @@ namespace Filosofiya
             this.таймерToolStripMenuItem,
             this.записатьЦитатуToolStripMenuItem,
             this.выводЦитатыToolStripMenuItem,
-            this.обновлениеЦитатыToolStripMenuItem});
+            this.обновлениеЦитатыToolStripMenuItem,
+            this.автозагрузкаToolStripMenuItem});
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
             this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.настройкиToolStripMenuItem.Text = "Настройки";
@@ -240,6 +242,13 @@ namespace Filosofiya
             this.настройкиШрифтаЦитатыToolStripMenuItem.Text = "Настройки шрифта цитаты";
             this.настройкиШрифтаЦитатыToolStripMenuItem.Click += new System.EventHandler(this.настройкиШрифтаЦитатыToolStripMenuItem_Click);
             // 
+            // предпочтенияToolStripMenuItem
+            // 
+            this.предпочтенияToolStripMenuItem.Name = "предпочтенияToolStripMenuItem";
+            this.предпочтенияToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.предпочтенияToolStripMenuItem.Text = "Предпочтения";
+            this.предпочтенияToolStripMenuItem.Click += new System.EventHandler(this.предпочтенияToolStripMenuItem_Click);
+            // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
@@ -280,12 +289,12 @@ namespace Filosofiya
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
-            // предпочтенияToolStripMenuItem
+            // автозагрузкаToolStripMenuItem
             // 
-            this.предпочтенияToolStripMenuItem.Name = "предпочтенияToolStripMenuItem";
-            this.предпочтенияToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.предпочтенияToolStripMenuItem.Text = "Предпочтения";
-            this.предпочтенияToolStripMenuItem.Click += new System.EventHandler(this.предпочтенияToolStripMenuItem_Click);
+            this.автозагрузкаToolStripMenuItem.Name = "автозагрузкаToolStripMenuItem";
+            this.автозагрузкаToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.автозагрузкаToolStripMenuItem.Text = "Автозагрузка";
+            this.автозагрузкаToolStripMenuItem.Click += new System.EventHandler(this.автозагрузкаToolStripMenuItem_Click);
             // 
             // основное1
             // 
@@ -339,5 +348,6 @@ namespace Filosofiya
         private System.Windows.Forms.ToolStripMenuItem обновлениеЦитатыToolStripMenuItem;
         private MaterialSkin.Controls.MaterialRaisedButton button1;
         private System.Windows.Forms.ToolStripMenuItem предпочтенияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem автозагрузкаToolStripMenuItem;
     }
 }
