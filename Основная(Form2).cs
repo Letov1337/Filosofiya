@@ -472,9 +472,18 @@ namespace Filosofiya
         }
         public void Получение_изображение_об_авторе()
         {
+            try
+            {
                 pictureBox1.Image = null;
                 pictureBox1.Image = Image.FromFile(@".\Resources\img\" + автор.ToString() + ".jpg");
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            catch
+            {
+                pictureBox1.Image = null;
+                pictureBox1.Image = Image.FromFile(@".\Resources\img\noname.jpg");
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
 
         public void Уведомления(string цитата)
