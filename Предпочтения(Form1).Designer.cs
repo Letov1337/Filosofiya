@@ -176,6 +176,7 @@ namespace Filosofiya
             this.Controls.Add(this.label2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Предпочтения";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выберите предпочтения:";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Предпочтения_FormClosed);
