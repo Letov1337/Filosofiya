@@ -60,30 +60,30 @@ namespace Filosofiya
                 Console.WriteLine(цитата);
                 label1.Text = цитата;
             }
-            //if (Data.Выдача_цитат == 1)
-            //{
-            //    mas = line.Split('\n');
-            //    Random rand = new Random();
-            //    int num = rand.Next(0, mas.Length);
-            //    цитата = mas[num];
-            //    Console.WriteLine(цитата);
-            //    label1.Text = цитата;
-            //}
-            //if (Data.Выдача_цитат == 2)
-            //{
-            //    //Последовательный вывод 
-            //    mas = line.Split('\n');
-            //    if (p >= mas.Length)
-            //    {
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        цитата = mas[p];
-            //        Console.WriteLine(цитата);
-            //        label1.Text = цитата;
-            //    }
-            //}
+            if (Data.Выдача_цитат == 1)
+            {
+                mas = line.Split('\n');
+                Random rand = new Random();
+                int num = rand.Next(0, mas.Length);
+                цитата = mas[num];
+                Console.WriteLine(цитата);
+                label1.Text = цитата;
+            }
+            if (Data.Выдача_цитат == 2)
+            {
+                //Последовательный вывод 
+                mas = line.Split('\n');
+                if (p >= mas.Length)
+                {
+                    return;
+                }
+                else
+                {
+                    цитата = mas[p];
+                    Console.WriteLine(цитата);
+                    label1.Text = цитата;
+                }
+            }
         }
         public void Рандом(string[] mas, string line)
         {
@@ -470,41 +470,11 @@ namespace Filosofiya
                 MessageBox.Show("Нужно вывести цитату!");
             }
         }
-        string Ницще = @".\Resources\img\ницше.jpg";
-        string Декарт = @".\Resources\img\декарт.jpg";
-        string Лейбниц = @".\Resources\img\лейбниц.jpg";
-        string Test = @".\Resources\img\test.jpg";
         public void Получение_изображение_об_авторе()
         {
-            
-                    if (автор == "Ницше")
-                    {
-                        pictureBox1.Image = null;
-                        pictureBox1.Image = Image.FromFile(Ницще);
-                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-    
-                    }
-                    if (автор == "Декарт")
-                    {
-                        pictureBox1.Image = null;
-                        pictureBox1.Image = Image.FromFile(Декарт);
-                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                     }
-                    if (автор == "Лейбниц")
-                    {
-                        pictureBox1.Image = null;
-                        pictureBox1.Image = Image.FromFile(Лейбниц);
-                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                     }
-                    if (автор == "тест")
-                     {
-                       pictureBox1.Image = null;
-                       pictureBox1.Image = Image.FromFile(Test);
-                       pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                      }
-
+                pictureBox1.Image = null;
+                pictureBox1.Image = Image.FromFile(@".\Resources\img\" + автор.ToString() + ".jpg");
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         public void Уведомления(string цитата)

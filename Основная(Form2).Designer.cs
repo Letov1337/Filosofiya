@@ -44,6 +44,7 @@ namespace Filosofiya
             this.записатьЦитатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выводЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновлениеЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.автозагрузкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.темаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.настройкиШрифтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,21 +57,18 @@ namespace Filosofiya
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.button1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.автозагрузкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(221, 142);
+            this.label1.Location = new System.Drawing.Point(163, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(515, 56);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
@@ -79,7 +77,7 @@ namespace Filosofiya
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(219, 164);
+            this.linkLabel1.Location = new System.Drawing.Point(163, 190);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(37, 13);
             this.linkLabel1.TabIndex = 2;
@@ -91,7 +89,7 @@ namespace Filosofiya
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 102);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(145, 168);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -106,7 +104,7 @@ namespace Filosofiya
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(686, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(690, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -201,6 +199,13 @@ namespace Filosofiya
             this.обновлениеЦитатыToolStripMenuItem.Text = "Обновление цитаты";
             this.обновлениеЦитатыToolStripMenuItem.Click += new System.EventHandler(this.обновлениеЦитатыToolStripMenuItem_Click);
             // 
+            // автозагрузкаToolStripMenuItem
+            // 
+            this.автозагрузкаToolStripMenuItem.Name = "автозагрузкаToolStripMenuItem";
+            this.автозагрузкаToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.автозагрузкаToolStripMenuItem.Text = "Автозагрузка";
+            this.автозагрузкаToolStripMenuItem.Click += new System.EventHandler(this.автозагрузкаToolStripMenuItem_Click);
+            // 
             // темаToolStripMenuItem
             // 
             this.темаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -265,7 +270,7 @@ namespace Filosofiya
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(343, 102);
+            this.label2.Location = new System.Drawing.Point(344, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 23);
             this.label2.TabIndex = 6;
@@ -279,7 +284,7 @@ namespace Filosofiya
             // button1
             // 
             this.button1.Depth = 0;
-            this.button1.Location = new System.Drawing.Point(202, 200);
+            this.button1.Location = new System.Drawing.Point(163, 216);
             this.button1.MouseState = MaterialSkin.MouseState.HOVER;
             this.button1.Name = "button1";
             this.button1.Primary = true;
@@ -289,18 +294,11 @@ namespace Filosofiya
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
-            // автозагрузкаToolStripMenuItem
-            // 
-            this.автозагрузкаToolStripMenuItem.Name = "автозагрузкаToolStripMenuItem";
-            this.автозагрузкаToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.автозагрузкаToolStripMenuItem.Text = "Автозагрузка";
-            this.автозагрузкаToolStripMenuItem.Click += new System.EventHandler(this.автозагрузкаToolStripMenuItem_Click);
-            // 
             // основное1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 321);
+            this.ClientSize = new System.Drawing.Size(690, 321);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);

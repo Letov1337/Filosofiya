@@ -535,5 +535,20 @@ namespace Filosofiya
                 MessageBox.Show("Автозагрузка включена!");
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = openFileDialog1.FileName;
+            // читаем файл в строку
+            MessageBox.Show("Файл открыт");
+        }
     }
 }

@@ -55,9 +55,11 @@ namespace Filosofiya
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button8 = new System.Windows.Forms.Button();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -125,6 +127,7 @@ namespace Filosofiya
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button9);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.comboBox2);
             this.tabPage1.Controls.Add(this.button2);
@@ -147,6 +150,7 @@ namespace Filosofiya
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox2
             // 
@@ -351,6 +355,27 @@ namespace Filosofiya
             this.tabPage5.Text = "Автозагрузка";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(372, 71);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Применить";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Выключить",
+            "Включить"});
+            this.comboBox4.Location = new System.Drawing.Point(349, 33);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.TabIndex = 1;
+            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -364,26 +389,19 @@ namespace Filosofiya
             this.label5.Text = "Автозагрузка\r\n\r\n\r\n";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox4
+            // button9
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Выключить",
-            "Включить"});
-            this.comboBox4.Location = new System.Drawing.Point(349, 33);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 1;
+            this.button9.Location = new System.Drawing.Point(7, 240);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(187, 23);
+            this.button9.TabIndex = 5;
+            this.button9.Text = "Добавить фотографию";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button8
+            // openFileDialog1
             // 
-            this.button8.Location = new System.Drawing.Point(372, 71);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Применить";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Настройки
             // 
@@ -439,5 +457,7 @@ namespace Filosofiya
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
