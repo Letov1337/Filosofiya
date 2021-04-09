@@ -568,6 +568,7 @@ namespace Filosofiya
                 materialskin.Theme = MaterialSkinManager.Themes.DARK;
                 this.Controls["label1"].BackColor = Color.FromName("Gray");
                 this.Controls["linkLabel1"].BackColor = Color.FromName("Gray");
+                this.Controls["linkLabel2"].BackColor = Color.FromName("Gray");
                 this.Controls["menuStrip1"].BackColor = Color.FromName("Gray");
                 this.Controls["button1"].BackColor = Color.FromName("Gray");
                 this.Controls["button1"].ForeColor = Color.FromName("ControlDark");
@@ -579,9 +580,11 @@ namespace Filosofiya
                 materialskin.Theme = MaterialSkinManager.Themes.LIGHT;
                 this.Controls["label1"].BackColor = Color.FromName("White");
                 this.Controls["linkLabel1"].BackColor = Color.FromName("White");
+                this.Controls["linkLabel2"].BackColor = Color.FromName("White");
                 this.Controls["menuStrip1"].BackColor = Color.FromName("White");
                 this.Controls["button1"].BackColor = Color.FromName("Control");
                 this.Controls["button1"].ForeColor = Color.FromName("ControlText");
+
             }
         }
 
