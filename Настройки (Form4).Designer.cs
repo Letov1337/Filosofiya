@@ -36,6 +36,7 @@ namespace Filosofiya
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -58,14 +59,21 @@ namespace Filosofiya
             this.button8 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button12 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -142,6 +150,16 @@ namespace Filosofiya
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(7, 240);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(187, 23);
+            this.button9.TabIndex = 5;
+            this.button9.Text = "Добавить фотографию";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -203,6 +221,7 @@ namespace Filosofiya
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(1, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -389,19 +408,83 @@ namespace Filosofiya
             this.label5.Text = "Автозагрузка\r\n\r\n\r\n";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(7, 240);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(187, 23);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Добавить фотографию";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.button12);
+            this.tabPage6.Controls.Add(this.textBox3);
+            this.tabPage6.Controls.Add(this.button11);
+            this.tabPage6.Controls.Add(this.button10);
+            this.tabPage6.Controls.Add(this.listBox2);
+            this.tabPage6.Controls.Add(this.label6);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(791, 361);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Источники";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(343, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 17);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Источники";
+            // 
+            // listBox2
+            // 
+            this.listBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 17;
+            this.listBox2.Location = new System.Drawing.Point(18, 23);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(765, 225);
+            this.listBox2.TabIndex = 1;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(18, 254);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(152, 23);
+            this.button10.TabIndex = 2;
+            this.button10.Text = "Добавить новый источник";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(18, 284);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(152, 23);
+            this.button11.TabIndex = 3;
+            this.button11.Text = "Копировать источник";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(176, 257);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(152, 20);
+            this.textBox3.TabIndex = 4;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(177, 284);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(151, 23);
+            this.button12.TabIndex = 5;
+            this.button12.Text = "Добавить";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Настройки
             // 
@@ -423,6 +506,8 @@ namespace Filosofiya
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -459,5 +544,12 @@ namespace Filosofiya
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button12;
     }
 }

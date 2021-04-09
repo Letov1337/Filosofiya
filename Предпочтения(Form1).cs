@@ -211,7 +211,6 @@ namespace Filosofiya
             Предпочтения f1 = new Предпочтения();
             f1.Close();
             f2.Show();
-            MessageBox.Show(Data.Предпочтения_значение.ToString());
         }
 
         private void Предпочтения_FormClosed(object sender, FormClosedEventArgs e)

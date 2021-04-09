@@ -726,6 +726,14 @@ namespace Filosofiya
             Настройки form4 = new Настройки(this.d);
             form4.Show();
         }
+        
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            int b;
+            Data.Вкладка = 14;
+            Настройки form4 = new Настройки(this.b);
+            form4.Show();
+        }
     }
 }
 

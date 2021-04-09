@@ -16,6 +16,7 @@ using System.Net.NetworkInformation;
 using System.Net.Http;
 using System.Threading;
 using Microsoft.Win32;
+using System.Diagnostics;
 namespace Filosofiya
 {
     public partial class Настройки : MaterialForm
@@ -160,9 +161,27 @@ namespace Filosofiya
             Считываем();
             this.data = data;
         }
-
+        string[] mas2;
+        string line2;
+        public void Источники()
+        {
+            button12.Hide();
+            textBox3.Hide();
+            StreamReader sr1 = new StreamReader(@".\Resources\links.txt");
+            string line2 = sr1.ReadToEnd();
+            sr1.Close();
+            if (line2 != null)
+            {
+                mas2 = line2.Split('\n');
+                for (int i = 0; i < mas2.Length; i++)
+                {
+                    listBox2.Items.Add(mas2[i]);
+                }
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
+            Источники();
             textBox2.Hide();
             button7.Hide();
             if (data == 4 || Data.Вкладка == 3 )
@@ -184,6 +203,10 @@ namespace Filosofiya
             if (Data.Вкладка == 10)
             {
                 tabControl1.SelectedIndex = 4;
+            }
+            if (Data.Вкладка == 14)
+            {
+                tabControl1.SelectedIndex = 5;
             }
         }
 
@@ -549,6 +572,47 @@ namespace Filosofiya
             string filename = openFileDialog1.FileName;
             // читаем файл в строку
             MessageBox.Show("Файл открыт");
+        }
+        
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string copy = listBox2.SelectedItem.ToString();
+            Clipboard.SetText(copy);
+            MessageBox.Show("Скопировано в буфер обмена:\n" + copy);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox3.Show();
+            button12.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            //using (StreamWriter myWriter = new StreamWriter(@".\Resources\links.txt"))
+            //{
+            //string line4 = textBox3.Text;
+            //myWriter.Write(line4 + Environment.NewLine);
+            //}
+            //StreamReader sr1 = new StreamReader(@".\Resources\links.txt");
+            //line2 = sr1.ReadToEnd();
+            //sr1.Close();
+            //mas2 = line2.Split('\n');
+            //foreach(string listline in mas2)
+            //{
+            //    listBox2.Items.Add(listline);
+            //}
+            string line4 = textBox3.Text;
+            listBox2.Items.Add(line4);
+            using (StreamWriter myWriter = new StreamWriter(@".\Resources\links.txt"))
+            {
+               foreach(var item in listBox2.Items)
+                {
+                    myWriter.WriteLine(item);
+                }
+            }
+            textBox3.Hide();
+            button12.Hide();
         }
     }
 }
