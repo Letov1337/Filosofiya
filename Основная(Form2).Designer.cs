@@ -66,10 +66,11 @@ namespace Filosofiya
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(163, 114);
+            this.label1.Location = new System.Drawing.Point(163, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(515, 56);
+            this.label1.Size = new System.Drawing.Size(515, 119);
             this.label1.TabIndex = 0;
             this.label1.Text = "Цитата:";
             this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
@@ -79,10 +80,11 @@ namespace Filosofiya
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(163, 170);
+            this.linkLabel1.Location = new System.Drawing.Point(163, 201);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(37, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(61, 20);
             this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Автор";
@@ -111,7 +113,7 @@ namespace Filosofiya
             // button1
             // 
             this.button1.Depth = 0;
-            this.button1.Location = new System.Drawing.Point(163, 196);
+            this.button1.Location = new System.Drawing.Point(163, 227);
             this.button1.MouseState = MaterialSkin.MouseState.HOVER;
             this.button1.Name = "button1";
             this.button1.Primary = true;
@@ -264,7 +266,7 @@ namespace Filosofiya
             this.toolStripComboBox2});
             this.темаToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.темаToolStripMenuItem.Name = "темаToolStripMenuItem";
-            this.темаToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.темаToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.темаToolStripMenuItem.Text = "Тема";
             // 
             // toolStripComboBox2
@@ -313,7 +315,7 @@ namespace Filosofiya
             // 
             this.выходToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
