@@ -53,6 +53,7 @@ namespace Filosofiya
         {
             if (Data.Выдача_цитат == 0)
             {
+                //.Remove(цитата.IndexOf(" (")
                 mas = line.Split('\n');
                 Random rand = new Random();
                 int num = rand.Next(0, mas.Length);
