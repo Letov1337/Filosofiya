@@ -150,6 +150,8 @@
     <Content Include="philosophy.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\back_menu.PNG" />
+    <None Include="Resources\back_menu1.PNG" />
     <Content Include="Resources\img\noname.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -195,6 +197,7 @@
     <Content Include="Resources\links.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\menustip.PNG" />
     <Content Include="Resources\povezlo.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
