@@ -58,8 +58,8 @@ namespace Filosofiya
                 Random rand = new Random();
                 int num = rand.Next(0, mas.Length);
                 цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
+                Console.WriteLine(цитата.Remove(цитата.IndexOf(" (")));
+                label1.Text = цитата.Remove(цитата.IndexOf(" ("));
             }
             if (Data.Выдача_цитат == 1)
             {
@@ -67,8 +67,8 @@ namespace Filosofiya
                 Random rand = new Random();
                 int num = rand.Next(0, mas.Length);
                 цитата = mas[num];
-                Console.WriteLine(цитата);
-                label1.Text = цитата;
+                Console.WriteLine(цитата.Remove(цитата.IndexOf(" (")));
+                label1.Text = цитата.Remove(цитата.IndexOf(" ("));
             }
             if (Data.Выдача_цитат == 2)
             {
@@ -81,8 +81,8 @@ namespace Filosofiya
                 else
                 {
                     цитата = mas[p];
-                    Console.WriteLine(цитата);
-                    label1.Text = цитата;
+                    Console.WriteLine(цитата.Remove(цитата.IndexOf(" (")));
+                    label1.Text = цитата.Remove(цитата.IndexOf(" ("));
                 }
             }
         }
@@ -507,7 +507,7 @@ namespace Filosofiya
             Рандом(mas, line);
             if (toolStripComboBox1.SelectedIndex == 0)
             {
-                Уведомления(цитата);
+                Уведомления(цитата.Remove(цитата.IndexOf(" (")));
             }
             else if (toolStripComboBox1.SelectedIndex == 1)
             {
