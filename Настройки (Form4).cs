@@ -566,12 +566,31 @@ namespace Filosofiya
 
         private void button9_Click(object sender, EventArgs e)
         {
+            string sourceFile = @".\Resources\img\";
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Images files (*.jpg)|*.jpg|All files (*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+            {
                 return;
+            }
             // получаем выбранный файл
             string filename = openFileDialog1.FileName;
-            // читаем файл в строку
-            MessageBox.Show("Файл открыт");
+            //откуда копируем
+            string Dir1 = filename;
+            //куда копируем
+            string Dir2 = sourceFile;
+            try
+            {
+                DirectoryInfo dirInfo = new DirectoryInfo(Dir1);
+                foreach (FileInfo file in dirInfo.GetFiles("*.*"))
+                {
+                    File.Copy(file.FullName, Dir2 + "\\" + file.Name, true);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         
         private void button11_Click(object sender, EventArgs e)
