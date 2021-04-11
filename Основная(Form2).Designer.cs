@@ -48,10 +48,10 @@ namespace Filosofiya
             this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
             this.таймерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
-            this.записатьЦитатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выводЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.обновлениеЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.автозагрузкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выводЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.записатьЦитатуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обновлениеЦитатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.темаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.настройкиШрифтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -232,12 +232,12 @@ namespace Filosofiya
             this.toolStripComboBox4.Text = "Вкл,выкл.";
             this.toolStripComboBox4.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox4_SelectedIndexChanged);
             // 
-            // записатьЦитатуToolStripMenuItem
+            // автозагрузкаToolStripMenuItem
             // 
-            this.записатьЦитатуToolStripMenuItem.Name = "записатьЦитатуToolStripMenuItem";
-            this.записатьЦитатуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.записатьЦитатуToolStripMenuItem.Text = "Добавить цитату";
-            this.записатьЦитатуToolStripMenuItem.Click += new System.EventHandler(this.записатьЦитатуToolStripMenuItem_Click);
+            this.автозагрузкаToolStripMenuItem.Name = "автозагрузкаToolStripMenuItem";
+            this.автозагрузкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.автозагрузкаToolStripMenuItem.Text = "Автозагрузка";
+            this.автозагрузкаToolStripMenuItem.Click += new System.EventHandler(this.автозагрузкаToolStripMenuItem_Click);
             // 
             // выводЦитатыToolStripMenuItem
             // 
@@ -246,19 +246,19 @@ namespace Filosofiya
             this.выводЦитатыToolStripMenuItem.Text = "Вывод цитаты";
             this.выводЦитатыToolStripMenuItem.Click += new System.EventHandler(this.выводЦитатыToolStripMenuItem_Click);
             // 
+            // записатьЦитатуToolStripMenuItem
+            // 
+            this.записатьЦитатуToolStripMenuItem.Name = "записатьЦитатуToolStripMenuItem";
+            this.записатьЦитатуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.записатьЦитатуToolStripMenuItem.Text = "Добавить цитату";
+            this.записатьЦитатуToolStripMenuItem.Click += new System.EventHandler(this.записатьЦитатуToolStripMenuItem_Click);
+            // 
             // обновлениеЦитатыToolStripMenuItem
             // 
             this.обновлениеЦитатыToolStripMenuItem.Name = "обновлениеЦитатыToolStripMenuItem";
             this.обновлениеЦитатыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.обновлениеЦитатыToolStripMenuItem.Text = "Обновление цитат";
             this.обновлениеЦитатыToolStripMenuItem.Click += new System.EventHandler(this.обновлениеЦитатыToolStripMenuItem_Click);
-            // 
-            // автозагрузкаToolStripMenuItem
-            // 
-            this.автозагрузкаToolStripMenuItem.Name = "автозагрузкаToolStripMenuItem";
-            this.автозагрузкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.автозагрузкаToolStripMenuItem.Text = "Автозагрузка";
-            this.автозагрузкаToolStripMenuItem.Click += new System.EventHandler(this.автозагрузкаToolStripMenuItem_Click);
             // 
             // темаToolStripMenuItem
             // 

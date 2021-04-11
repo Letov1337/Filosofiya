@@ -492,13 +492,13 @@ namespace Filosofiya
             popup = new PopupNotifier();
             //popup.Image = Properties.Resources.Image1;
             popup.ImageSize = new Size(96, 96); // размер изображения
-            popup.TitleText = цитата;
+            //popup.TitleText = цитата;
             popup.HeaderColor = Color.White; // цвет верхушки
             popup.BodyColor = Color.White;  // основной цвет
             popup.AnimationInterval = 20; // скорость анимации
             popup.ContentText = цитата;
-            popup.ContentFont = new Font("Times New Roman", 18); // цвет заголовка
-            popup.TitleFont = new Font("Times New Roman", 18); // цвет основн. текста
+            popup.ContentFont = new Font("Times New Roman", 12); // цвет заголовка
+            popup.TitleFont = new Font("Times New Roman", 12); // цвет основн. текста
             popup.TitleColor = Color.Black; //цвет текста
             popup.Popup();
         }
