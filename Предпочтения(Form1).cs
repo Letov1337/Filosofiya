@@ -211,6 +211,14 @@ namespace Filosofiya
             Предпочтения f1 = new Предпочтения();
             f1.Close();
             f2.Show();
+
+
+            Properties.Settings.Default.checkBoxIdeal = checkBoxIdeal.Checked;
+            Properties.Settings.Default.checkBoxMater = checkBoxMater.Checked;
+            Properties.Settings.Default.checkBoxMiddleAges = checkBoxMiddleAges.Checked;
+            Properties.Settings.Default.checkBoxNewTime = checkBoxNewTime.Checked;
+            Properties.Settings.Default.checkBoxAntique = checkBoxAntique.Checked;
+            Properties.Settings.Default.Save();
         }
 
         private void Предпочтения_FormClosed(object sender, FormClosedEventArgs e)
@@ -226,7 +234,7 @@ namespace Filosofiya
             Properties.Settings.Default.checkBoxNewTime = checkBoxNewTime.Checked;
             Properties.Settings.Default.checkBoxAntique = checkBoxAntique.Checked;
             Properties.Settings.Default.Save();
-            
+
         }
     }
 }
